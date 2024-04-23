@@ -1,5 +1,5 @@
 body{
-    background-image: url("/images/day.webp");
+    background-image: url("/public/assets/images/day.webp");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;

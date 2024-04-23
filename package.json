@@ -9,10 +9,8 @@
   },
   "keywords": [
     "my",
-    "first",
-    "node",
-    "js",
-    "project"
+    "daystar",
+    "daycare"
   ],
   "author": "mbabazi eken",
   "license": "ISC",
@@ -23,7 +21,7 @@
     "express": "^4.19.2",
     "login": "^0.8.0",
     "mongodb": "^6.5.0",
-    "mongoose": "^8.3.1",
+    "mongoose": "^8.3.2",
     "passport": "^0.7.0",
     "passport-local-mongoose": "^8.0.0",
     "path": "^0.12.7",

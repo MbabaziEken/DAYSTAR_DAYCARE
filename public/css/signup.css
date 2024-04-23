@@ -1,0 +1,39 @@
+body{
+    background-image: url("/images/day.webp");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h3{
+    padding-top: 20px;
+    color: rgb(129, 7, 93);
+    text-align: center;
+    font-weight: bolder;
+} p{
+    color: rgb(129, 7, 93);
+    text-align: center;
+    font-weight: bolder
+}
+                
+input[type="text"],input[type="name"], select{
+    background-color: rgb(129, 7, 93);
+    box-sizing: border-box;
+    width: 50%;
+    height: 50px;
+    margin: 0 300px;
+}
+
+label[class="form-label"]{
+    width: 50%;
+    height: 50px;
+    margin: 0 300px;
+}
+.custom-bg-color{
+    background-color: rgb(243, 09, 204);
+}
+ .btn-primary{
+    background-color: blueviolet;
+    margin: 0 600px;
+    
+}

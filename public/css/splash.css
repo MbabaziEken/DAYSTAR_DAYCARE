@@ -1,0 +1,101 @@
+body{
+    background-image: url(/images/images\ \(6\).jpg );
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#main{
+    margin: auto;
+    width: 80%;
+}
+
+#navbar{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(243, 9, 204);
+    background-repeat: repeat;
+    background-size: cover;
+}  
+
+#navbar ul{
+    margin: 0;
+    padding: 0;  
+}
+
+#navbar il{
+    display: inline;
+    float: left;
+}
+
+#navbar a{
+    display: block;
+    margin-left: 150%;
+    margin-right: 50%;
+    padding: 10px  40px;
+    background-image: url(/daystardaycare2/images/images\ \(2\).jpg);
+    background-size: cover;
+    width: 100%;
+    height: 60px;
+    color: rgb(5, 171, 248);
+    font-weight: bolder;
+    text-decoration: none;
+    align-content: left;
+}
+#navbar a:hover{
+    background-color: blueviolet;
+    font-weight: bolder;
+}
+
+h1{
+    background-color: beige;
+    margin: 0;
+    padding-top: 5%;
+    padding-bottom: 0;
+    text-align: center;
+    color: blueviolet;
+
+}
+
+p{
+    background-color: beige;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: blueviolet;
+}
+
+#content{
+        width: 100%;
+        padding: 10px;
+        background-color: beige;
+        box-sizing: border-box;
+        display: flex;
+}
+
+#left {
+      margin:0;
+      padding:0;
+     overflow: auto;
+     flex: 1;
+}
+
+#left img{
+        padding-top: 50px;
+         border-radius: 50px;
+         
+}
+
+#right{
+       margin: 0;
+       padding: 0;
+}
+
+#right img{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    border-radius: 35px;
+    width: 550px;
+    height: 550px;
+    box-sizing: border-box;
+    flex: 1;
+}
+

@@ -1,0 +1,80 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    background-image: url(/images/ai-generated-8590755_640.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.custom-bg-color{
+    background-color:#FFF380 ;
+    
+        
+}
+
+
+#main{
+    background-color: #cccc;
+    margin: auto;
+    padding-top: 20px;
+    width: 60%;
+}
+
+
+h5{
+    margin: 0;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+    color: blueviolet;
+
+}
+
+p{
+    background-color: beige;
+    padding-bottom: 5%;
+    margin: 0;
+    text-align: center;
+    color: blueviolet;
+} 
+
+.container{
+          max-width: 50%;
+          margin-left: 50%;
+          padding-top: 25px 50px;
+          background: scroll;
+} 
+
+input[type="text"]{
+            background-color: #FFF;
+            margin: 0px 70px ;
+            width: 80%; 
+            height: 50px;
+            border-radius: 10px;
+} 
+
+input[type="number"]{
+           margin: 0px 70px;
+           width: 80%; 
+           height: 50px;
+           border-radius: 10px;
+}
+
+select[id=gender]{
+    margin:0px 70px;
+    width: 80%; 
+    height: 50px;
+    border-radius: 10px;
+}
+
+button[class="btn-primary"]{
+    background-color:#FFF380;
+    color: rgb(29, 29, 1);
+    width: 100px;
+    height: 60px;
+    border-radius: 20px;
+    margin:0px 350px ;
+}
+
+
+

@@ -1,0 +1,25 @@
+.custom-bg-color{
+    background-color: rgb(243, 9, 204);
+}
+
+body{
+    background-image: url(/daystardaycare2/images/day.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h3{
+    text-align: center;
+    z-index: 5;
+    font-style: oblique;
+    color: blueviolet;
+}
+
+p{
+    text-align: center;
+    color: rgb(72, 3, 75);
+    font-size: xx-large;
+    z-index: 5;
+}
+
+

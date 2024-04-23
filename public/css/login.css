@@ -1,0 +1,52 @@
+body{
+    background-image: url(/images/school-7355058_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+#main{
+    margin: 100px 300px;
+    width:60% ;
+    height: 50px;
+}
+
+h1{
+    color: blueviolet;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 50px;
+} 
+
+p{
+    color: blueviolet;
+    text-align: center;
+    font-weight: bolder;   
+}
+
+label[class="form-label"]{
+    font-size: xx-large;
+    color: blueviolet;
+    font-weight: bolder;
+   margin: 0 200px;
+   padding-top: 50px;
+   
+}
+
+input[type="text"],input[type="password"]{
+    background-color: #fff380;
+    width: 50%;
+    height: 70px;
+    margin: 0 200px;
+}
+
+button[class=" btn btn-primary"],[type="submit"]{
+    background-color:blueviolet;
+    color: rgb(29, 29, 1);
+    width: 100px;
+    height: 60px;
+    border-radius: 20px;
+    margin:20px 350px ;
+    
+}

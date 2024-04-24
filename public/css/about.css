@@ -3,12 +3,12 @@
 }
 
 body{
-    background-image: url(/daystardaycare2/images/day.webp);
+    background-image: url(/public/assets/images/ai-generated-8590755_640.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-h3{
+h1{
     text-align: center;
     z-index: 5;
     font-style: oblique;

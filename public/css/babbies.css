@@ -7,17 +7,18 @@ body{
 }
 
 .custom-bg-color{
-    background-color: rgb(9, 243, 212);
-    
-        
+    background-color: rgb(173, 90, 250);
+           
 }
 
-
 #main{
-    background-color: #21c8de;
-    margin: auto;
+    background-color: rgb(160, 62, 252);
+    margin-top:40px ;
+    margin-left:600px ;
+    /* margin-right: 250px; */
     padding-top: 20px;
-    width: 60%;
+    width: 20%;
+    border-radius: 0px;
 }
 
 
@@ -26,7 +27,7 @@ h5{
     padding-top: 3%;
     padding-bottom: 3%;
     text-align: center;
-    color: blueviolet;
+    color: rgb(50, 3, 94);
 
 }
 
@@ -35,7 +36,7 @@ p{
     padding-bottom: 5%;
     margin: 0;
     text-align: center;
-    color: blueviolet;
+    color: rgb(42, 3, 78);
 } 
 
 .container{
@@ -47,32 +48,32 @@ p{
 
 input[type="text"]{
             margin: 0px 70px ;
-            width: 80%; 
-            height: 50px;
+            width: 50%; 
+            height: 30px;
             border-radius: 10px;
 } 
 
 input[type="number"]{
            margin: 0px 70px;
-           width: 80%; 
-           height: 50px;
+           width: 50%; 
+           height: 30px;
            border-radius: 10px;
 }
 
 select[id=gender]{
     margin:0px 70px;
-    width: 80%; 
-    height: 50px;
+    width: 50%; 
+    height: 30px;
     border-radius: 10px;
 }
 
 button[class="btn-primary"]{
     background-color:#720C99;
     color: beige;
-    width: 100px;
+    width: 80px;
     height: 60px;
     border-radius: 20px;
-    margin:0px 350px ;
+    margin:0px 90px ;
 }
 
 

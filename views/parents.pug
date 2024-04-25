@@ -1,0 +1,55 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title parents
+  link(href='/assets/boostrap/css/boostrap.css')
+  link(rel='stylesheet' href='/public/css/parents.css')
+#main
+  #container
+    #rol
+    h5 PARENTS FORM
+    form.entry-form(action='parents.html')
+      .input
+        label(for='parents')  
+        input.parents-text-form(type='text' placeholder='FULLNAME' name='enteryourname')
+      br
+      .form-group
+        label(for='parents')  
+        input.parents-text-form(type='text' placeholder=" BABY'S NAME" name='enteryourbabbiesname')
+      br
+      .form-group
+        label(for='sitters-age')
+        input.parents-text-form(type='number' placeholder='AGE' name='enteryourage')
+      br
+      .form-group
+        label(for='gender ')  
+        select#gender(name='gender')
+          option(value='') GENDER
+          option(value='male') male
+          option(value='female') female
+          option(value='other') other
+      br
+      .form-group
+      label(for='NIN.no.')  
+      input.parents-text-form(type='text' placeholder='NIN.no.' name='enteryourNIN')
+  br
+  .form-group
+    label(for='location')  
+    input.parents-text-form(type='text' placeholder='LOCATION' name='place of residence')
+  br
+  .form-group
+    label(for='contact')  
+    input.parents-text-form(type='text' placeholder='CONTACT' name='phonenumber')
+  br
+  .form-group
+    label(for='next-of-kin')  
+    input.parents-text-form(type='text' placeholder='NEXT OF KIN' name='writeyournextofkin')
+  br
+  .form-group
+    label(for="next-of-kin's-contact")  
+    input.parents-text-form(type='text' placeholder="NEXT OF KIN'S CONTACT" name='theirphonenumber')
+  br
+  button.btn-primary register
+script(src='../javascript/parents.js')
+script(src='/assets/boostrap/js/boostrap.bundle.js')

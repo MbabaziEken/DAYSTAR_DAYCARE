@@ -25,7 +25,7 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/pages/login.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="/views/splashscreen.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href=""></a>
@@ -51,55 +51,65 @@
     </div>
   </nav>
 
-<div id="main">
-<div id="container">
-  <div id="rol"></div>
-  <h5>BABBIES FORM</h5>
-<form action="sitters.html" id="submit" class="entry-form">
-  <div class="input"> 
-<label for="sitters-name"> </label>
-<input type="text" class="sitters-text-form" placeholder="NAME" > 
-</div><br>
+  <div id="main">
+    <div id="container">
+      <div id="rol"></div>
+      <h5>BABBIES FORM</h5>
+    <form action="babbies.html" id="submit" class="entry-form">
+      <div class="input"> 
+    <label for="babbies-name"> </label>
+    <input type="text" class="babbies-text-form" placeholder="FULLNAME" name="Enterbabayname" > 
+    </div><br>
+    
+    <div class="form-group">
+    <label for="sitters-age" ></label>
+    <input type="number" class="sitters-text-form" placeholder="AGE" >
+    </div><br>
+    
+    <div class="form-group">
+    <label for="gender " > </label>
+    <select id="gender" name="gender">
+    <option value="">GENDER</option>  
+    <option value="male">male</option>
+    <option value="female">female</option>
+    </select>
+    </div><br>
+    
+    <div class="form-group"></div>
+    <label for="favorites" > </label>
+    <input type="text" class="sitters-text-form" placeholder="FAVORITES" name="babbieslikes" >
+    </div> <br>
+    
+    <div class="form-group">
+    <label for="health-status" > </label>
+    <input type="text" class="sitters-text-form" placeholder="HEALTH STATUS" name="Enter health difficulties if any" >
+    </div><br>
+    
+    <div class="form-group">
+    <label for="parent's-contact" > </label>
+    <input type="text" class="sitters-text-form" placeholder="PARENT'S CONTACT" name="contactdetails" >
+    </div><br>
+    
+    <div class="form-group">
+    <label for="parent's-name" > </label>
+    <input type="text" class="babbies-text-form" placeholder="PARENT'S NAME" name="both names" >
+    </div><br>
+    
+    <div class="form-group">
+      <label for="next-of-kin" > </label>
+    <input type="text" class="sitters-text-form" placeholder="NEXT OF KIN" name="anyoneelsetopickupthebabby" >
+    </div><br>
+    
+    <div class="form-group">
+    <label for="babby-number"> </label>
+    <input type="text" class="sitters-text-form" placeholder="BABBY NUMBER" name="idno">
+    </div><br>
+    
+    <button class="btn-primary" type="submit">register</button>
+    </form>
+    </div>
+    
 
-<div class="form-group">
-<label for="sitters-age" ></label>
-<input type="number" class="sitters-text-form" placeholder="AGE" >
-</div><br>
-
-<div class="form-group">
-<label for="gender " > </label>
-<select id="gender" name="gender">
-<option value="">GENDER</option>  
-<option value="male">male</option>
-<option value="female">female</option>
-</select>
-</div><br>
-
-<div class="form-group"></div>
-<label for="ALLERGIES" > </label>
-<input type="text" class="sitters-text-form" placeholder="ALLERGIES" >
-</div> <br>
-
-<div class="form-group">
-<label for="HEALTHSTATUS" > </label>
-<input type="text" class="sitters-text-form" placeholder="HEALTH STATUS" >
-</div><br>
-
-<div class="form-group">
-<label for="Parent's-contact" > </label>
-<input type="text" class="sitters-text-form" placeholder="PARENT'S CONTACT" >
-</div><br>
-
-<div class="form-group">
-<label for="FAVORITES" > </label>
-<input type="text" class="sitters-text-form" placeholder="FAVORITES" >
-</div><br>
-
-
-
-<button class="btn-primary" type="submit">register</button>
-</form>
-</div>
       <script src="../javascript/babbies.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>

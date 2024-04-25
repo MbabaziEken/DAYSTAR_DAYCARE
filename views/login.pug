@@ -1,0 +1,31 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Login
+  link(href='/public/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/public/css/login.css')
+#main
+  h1 WELCOME TO DAYSTARDAYCARE
+  p
+    | At daystar daycare we believe that GOD is love and we extend that affection, passion and compassion
+    | to the children entrusted to us
+  .container
+    .row
+      .col
+        form#login
+          .input
+            label.form-label Email
+            input.form-control(name='email' type='text' placeholder='')
+          .input
+            label.form-label(name='password') Password
+            input.form-control(name='password' type='password' placeholder='')
+          #login-message
+          div
+            button.btn.btn-primary(type='submit') login
+            ul
+              il
+                a(href='/views/admin.html') Admin
+        div
+script(src='../javascript/login.js')
+script(src='/public/assets/bootstrap/js/bootstrap.bundle.js')

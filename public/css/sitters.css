@@ -1,7 +1,7 @@
 body{
     padding: 0%;
     margin: 0%;
-    background-image: url(/images/alphabet-word-images-1293193_640.png);
+    background-image: url(/public/assets/images/alphabet-word-images-1293193_640.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -15,9 +15,11 @@ body{
 
 #main{
     background-color: #FFB0EA;
-    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 30%;
     padding-top: 20px;
-    width: 60%;
+    width: 40%;
 }
 
 
@@ -46,33 +48,33 @@ p{
 } 
 
 input[type="text"]{
-            margin: 0px 70px ;
-            width: 80%; 
-            height: 50px;
+            margin: 0px 160px ;
+            width: 40%; 
+            height: 25px;
             border-radius: 10px;
 } 
 
 input[type="number"]{
-           margin: 0px 70px;
-           width: 80%; 
-           height: 50px;
+           margin: 0px 160px;
+           width: 40%; 
+           height: 25px;
            border-radius: 10px;
 }
 
 select[id=gender]{
-    margin:0px 70px;
-    width: 80%; 
-    height: 50px;
+    margin:0px 160px;
+    width: 40%; 
+    height: 25px;
     border-radius: 10px;
 }
 
 button[class="btn-primary"]{
     background-color: rgb(243, 9, 204);
     color: rgb(5, 171, 248);
-    width: 100px;
+    width: 80px;
     height: 60px;
     border-radius: 20px;
-    margin:0px 350px ;
+    margin:0px 230px ;
 }
 
 

@@ -19,7 +19,7 @@ body{
     margin-top: 5%;
     margin-bottom: 5%;
     padding-top: 20px;
-    width: 60%;
+    width: 20%;
 }
 
 
@@ -49,33 +49,33 @@ p{
 
 input[type="text"]{
             background-color: #FFF;
-            margin: 0px 70px ;
+            margin: 0px 35px ;
             width: 80%; 
-            height: 50px;
+            height: 30px;
             border-radius: 10px;
 } 
 
 input[type="number"]{
-           margin: 0px 70px;
+           margin: 0px 35px;
            width: 80%; 
-           height: 50px;
+           height: 30px;
            border-radius: 10px;
 }
 
 select[id=gender]{
-    margin:0px 70px;
+    margin:0px 35px;
     width: 80%; 
-    height: 50px;
+    height: 30px;
     border-radius: 10px;
 }
 
 button[class="btn-primary"]{
     background-color:#FFF380;
     color: rgb(29, 29, 1);
-    width: 100px;
-    height: 60px;
+    width: 70px;
+    height: 40px;
     border-radius: 20px;
-    margin:0px 350px ;
+    margin:0px 100px ;
 }
 
 

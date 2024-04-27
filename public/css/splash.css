@@ -22,7 +22,7 @@ body{
 }
 
 #navbar il{
-    display: inline;
+    display: block;
     float: left;
 }
 
@@ -31,14 +31,14 @@ body{
     margin-left: 150%;
     margin-right: 50%;
     padding: 10px  40px;
-    background-image: url(/daystardaycare2/images/images\ \(2\).jpg);
+    background-image: url(/public/assets/images/images\ \(2\).jpg);
     background-size: cover;
     width: 100%;
     height: 60px;
     color: rgb(5, 171, 248);
     font-weight: bolder;
-    text-decoration: none;
-    align-content: left;
+    font-size: x-large;
+    text-align: center;
 }
 #navbar a:hover{
     background-color: blueviolet;
@@ -98,4 +98,24 @@ p{
     box-sizing: border-box;
     flex: 1;
 }
+
+#footer {
+    background-color: rgb(243, 9, 204);
+    
+    display: block;
+    color:rgb(5, 171, 248) ;
+    text-align: center;
+    font-weight: bolder;
+    font-size: x-large;
+    height: 100px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+a:hover{
+    background-color: rgb(43, 205, 226);
+    font-weight: bolder;
+}
+
+
 

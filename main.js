@@ -13,7 +13,7 @@ app.set("view engine","");
 
 // Routes
 app.get("/",(req,res) => {
-    res.render("daystardollstall")
+    res.render("")
 });
 
 app.listen(4000,() => {

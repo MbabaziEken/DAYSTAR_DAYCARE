@@ -15,11 +15,11 @@ body{
 
 #main{
     background-color: #FFB0EA;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 30%;
+    margin-top:40px ;
+    margin-left:600px ;
     padding-top: 20px;
-    width: 40%;
+    width: 20%;
+    border-radius: 0px;
 }
 
 
@@ -48,33 +48,33 @@ p{
 } 
 
 input[type="text"]{
-            margin: 0px 160px ;
-            width: 40%; 
-            height: 25px;
+            margin: 0px 35px ;
+            width: 80%; 
+            height: 30px;
             border-radius: 10px;
 } 
 
 input[type="number"]{
-           margin: 0px 160px;
-           width: 40%; 
-           height: 25px;
+           margin: 0px 35px;
+           width: 80%; 
+           height: 30px;
            border-radius: 10px;
 }
 
 select[id=gender]{
-    margin:0px 160px;
-    width: 40%; 
-    height: 25px;
+    margin:0px 35px;
+    width: 80%; 
+    height: 30px;
     border-radius: 10px;
 }
 
 button[class="btn-primary"]{
     background-color: rgb(243, 9, 204);
     color: rgb(5, 171, 248);
-    width: 80px;
-    height: 60px;
+    width: 70px;
+    height: 40px;
     border-radius: 20px;
-    margin:0px 230px ;
+    margin:0px 100px ;
 }
 
 

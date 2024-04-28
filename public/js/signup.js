@@ -1,12 +1,19 @@
-const form = document.getElementById("form");
-const FullName = document.querrySelector(".")
+// form
+const form = documentget.
+ElementById("form");
 
-form.addEventListener("submit", (e) => {
-e.preventDefault ();
-validInput ();
-});
+const fullName = documentget.ElementById("fullName");
+const EBG = documentget.ElementById("EBG");
+const WE = documentget.ElementById("WE");
+const Gender = documentget.ElementById("Gender");
+const Email = documentget.ElementById("Email");
+const Password = documentget.ElementById("Password");
 
-//.....step.......//
-const validInput = () => {
+// validation
+function validatefullName(){
+   // check if empty
+   if(checkifempty(fullName)) return;
 
 }
+
+function checkIfEmpty

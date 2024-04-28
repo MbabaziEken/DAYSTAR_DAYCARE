@@ -23,19 +23,20 @@
     <form>
       <h3>Signup</h3>
       <div class="form-group">
-        <label class="form-label" for="exampleinputName" class="forml-abel">Name</label>
-        <input class="mb-3 form-control" type="text" placeholder="Full name" name="enterfullname">
+        <label class="form-label" for="exampleinputName" class="form-label">Name</label>
+        <input class="mb-3 form-control" type="text" id="fullName"  placeholder="Full name" name="enterfullname">
+        <span id="name_error"></span>
         </div><br>
       </div>
 
       <div class="form-group">
         <label class="form-label" for="exampleinputEBG" class="forml-abel">Education Background</label>
-        <input class="mb-3 form-control" type="text" placeholder="Education Background" name="EBG">
+        <input class="mb-3 form-control" type="text" id="EBG"  placeholder="Education Background" name="EBG">
         </div><br>
 
         <div class="form-group">
           <label class="form-label" for="exampleinputExprience" class="forml-abel">Working Exprience</label>
-          <input class="mb-3 form-control" type="text" placeholder="Working Exprience" name="periodspentworking">
+          <input class="mb-3 form-control" type="text" id="WE"  placeholder="Working Exprience" name="periodspentworking">
           </div><br>
 
           <div class="form-group">
@@ -50,27 +51,27 @@
 
       <div class="form-group">
         <label class=form-label for="exampleinputemail" class="form-label">Email</label>
-        <input class=" mb-3 form-control" type="text"  placeholder="Your Email" name="enteremail">
+        <input class=" mb-3 form-control" type="text" id="Email"   placeholder="Your Email" name="enteremail">
       </div><br>
     
       <div class="form-group">
         <label class=form-label for="exampleinputpassword" class="form-label">Password</label>
-        <input class="mb-3 form-control" type="password" placeholder="write password" name="your password">
+        <input class="mb-3 form-control" type="password" id="Password"  placeholder="write password" name="your password">
       </div><br>
 
         <div class="form-group">
           <label class=form-label for="exampleinputconfirmpassword" class="form-label">confirm password</label>
-          <input class="mb-3 form-control" type="password"   placeholder="" name="verifypassword">
+          <input class="mb-3 form-control" type="password" id="confirmPassword"   placeholder="" name="verifypassword">
         </div><br>
 
       <div>
-      <button class="btn btn-primary"   style="width:100px"; type="submit">signup</button>
+      <button class="btn btn-primary"  type="submit">SignUp</button>
   </div>
 </div>
   </div>
 </form>
   
-  <script src=""></script>
+  <script src="/public/js/signup.js"></script>
   <script src="/public/assets/bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>

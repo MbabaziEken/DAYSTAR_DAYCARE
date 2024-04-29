@@ -32,7 +32,7 @@ h3{
     font-size: xx-large;
 }
                 
-input[type="text"],input[type="name"],input[type="password"], select{
+input[type="text"],input[type="password"],input[type="name"],input[type="password"], select{
     background-color: rgb(245, 242, 242);
     box-sizing: border-box;
     width: 20%;
@@ -52,7 +52,7 @@ label[class="form-label"]{
  button{
     background-color: rgb(129, 7, 93);
     margin: 0 600px;
-    width: 10px;
+    width: 60px;
     height: 35px;
     border-radius: 20px;
     

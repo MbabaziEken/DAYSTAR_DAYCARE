@@ -3,75 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signup</title>
+  <title>Sign Up</title>
   <link href="/public/assets/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="/public/css/signup.css">
 </head>
 <body>
 
-  
   <h2>WELCOME TO DAYSTARDAYCARE</h2>
   <p>
     At daystar daycare we believe that GOD is love and we extend that affection, passion and compassion
     to the children entrusted to us
   </p>
-
   <img src="/public/assets/images/EKEN DAYSTAR.png" alt="Logo" width="150" height="150">
 
+
+  
+
   <div class="container">
+    <h3>Sign Up</h3>
+    <div class="row">
+      <form class="col" id="myform">
+        <div class="row">
+          <div class=" input-field col">
+          <label class="form-label" for="fullName">Name</label>
+          <input type="text" name="Full Name" id="Full Name"/>
+          <span class="helper-text"></span>
+          </div>
+          <br>
 
-    <form>
-      <h3>Signup</h3>
-      <div class="form-group">
-        <label class="form-label" for="exampleinputName" class="form-label">Name</label>
-        <input class="mb-3 form-control" type="text" id="fullName"  placeholder="Full name" name="enterfullname">
-        <span id="name_error"></span>
-        </div><br>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="exampleinputEBG" class="forml-abel">Education Background</label>
-        <input class="mb-3 form-control" type="text" id="EBG"  placeholder="Education Background" name="EBG">
-        </div><br>
-
-        <div class="form-group">
-          <label class="form-label" for="exampleinputExprience" class="forml-abel">Working Exprience</label>
-          <input class="mb-3 form-control" type="text" id="WE"  placeholder="Working Exprience" name="periodspentworking">
-          </div><br>
-
-          <div class="form-group">
-            <label for="gender " > </label>
+          <label  for="gender " > </label>
             <select id="gender" name="gender">
             <option value="">GENDER</option>  
             <option value="male">male</option>
             <option value="female">female</option>
             </select>
-          </div><br>
-        
+          </div>
+            <br>
 
-      <div class="form-group">
-        <label class=form-label for="exampleinputemail" class="form-label">Email</label>
-        <input class=" mb-3 form-control" type="text" id="Email"   placeholder="Your Email" name="enteremail">
-      </div><br>
-    
-      <div class="form-group">
-        <label class=form-label for="exampleinputpassword" class="form-label">Password</label>
-        <input class="mb-3 form-control" type="password" id="Password"  placeholder="write password" name="your password">
-      </div><br>
+          <div class="row">
+            <div class=" input-field col">
+            <label class="form-label"    for="EducationBackGround">Education Background</label>
+            <input type="text" name="EBG" id="EBG"/>
+            <span class="helper-text"></span>
+          </div>
+            <br>
 
-        <div class="form-group">
-          <label class=form-label for="exampleinputconfirmpassword" class="form-label">confirm password</label>
-          <input class="mb-3 form-control" type="password" id="confirmPassword"   placeholder="" name="verifypassword">
-        </div><br>
+            <div class="row">
+              <div class=" input-field col">
+              <label class="form-label"  for="placeofresidence">Place of Residence</label>
+              <input type="text" name="Place of Residence" id="RoP"/>
+              <span class="helper-text"></span>
+            </div>
+              <br>
 
-      <div>
-      <button class="btn btn-primary"  type="submit">SignUp</button>
+              <div class="row">
+                <div class=" input-field col">
+                <label class="form-label" for="workingexprience">Working Exprience</label>
+                <input type="text" name="Working Exprience" id="WE"/>
+                <span class="helper-text"></span>
+              </div>
+                <br>
+
+                <div class="row">
+                  <div class=" input-field col">
+                  <label class="form-label" for="email">Email</label>
+                  <input type="text" name="Email" id="Email"/>
+                  <span class="helper-text"></span>
+                </div>
+                  <br>
+
+                  <div class="row">
+                    <div class=" input-field col">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="Password" name="Password" id="Password"/>
+                    <span class="helper-text"></span>
+                  </div>
+                    <br>
+
+                    <div class="row">
+                      <div class=" input-field col">
+                      <label class="form-label" for="password">Confirm Password</label>
+                      <input type="Password" name="Confirm Password" id="Confirm Password"/>
+                      <span class="helper-text"></span>
+                    </div>
+                      <br>
+
+                      <div>
+                        <button class="btn btn-primary"  type="submit">SignUp</button>
+                    </div>
+
+                    
+
+        </div>
+      </form>
+    </div>
   </div>
-</div>
-  </div>
-</form>
+
   
+
+
+
   <script src="/public/js/signup.js"></script>
-  <script src="/public/assets/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="/public/assets/bootstrap/js/bootstrap.bundle.js"></script> 
 </body>
 </html>

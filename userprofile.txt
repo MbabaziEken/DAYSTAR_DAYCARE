@@ -1,0 +1,31 @@
+Admin
+name
+gender
+education background
+working exprience
+place of residence
+email
+password
+role
+
+Sitter
+name
+gender
+age
+education background
+location
+NINno.
+recommender's name
+recommender's contact
+role
+
+Babbies
+name
+age
+gender
+next of kin
+babby no.
+parent's name
+parent's contact
+health status
+allergies

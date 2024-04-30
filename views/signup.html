@@ -22,11 +22,11 @@
   <div class="container">
     <h3>Sign Up</h3>
     <div class="row">
-      <form class="col" id="myform">
+      <form class="col" id="myform" novalidate>
         <div class="row">
           <div class=" input-field col">
           <label class="form-label" for="fullName">Name</label>
-          <input type="text" name="Full Name" id="Full Name"/>
+          <input type="text" name="Full Name" id="Full Name" onfocusout="validatefullname"/>
           <span class="helper-text"></span>
           </div>
           <br>
@@ -43,7 +43,7 @@
           <div class="row">
             <div class=" input-field col">
             <label class="form-label"    for="EducationBackGround">Education Background</label>
-            <input type="text" name="EBG" id="EBG"/>
+            <input type="text" name="EBG" id="EBG" onfocusout="EBG"/>
             <span class="helper-text"></span>
           </div>
             <br>

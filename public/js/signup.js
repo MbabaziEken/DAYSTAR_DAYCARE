@@ -1,8 +1,8 @@
 // form
 const form = documentget.
-ElementById("form");
+ElementById("myform");
 
-// Fields
+// Input Fields
 const fullName = documentget.ElementById("fullName");
 const EBG = documentget.ElementById("EBG");
 const WE = documentget.ElementById("WE");
@@ -48,8 +48,8 @@ function setValid(field,message){
     field.nextElementSibling.style.color = green;
 }
 
-function checkIfonlyLetters(field){
-    if(/^[a-zA_Z ]+$/-TextDecoderStream(field.value)){
+function checkIfOnlyLetters(field){
+    if(/^[a-zA-Z ]+$/.test(field.value)){
         setValid(field)
         return true;
     } else{

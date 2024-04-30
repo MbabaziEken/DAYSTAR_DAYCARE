@@ -2,49 +2,67 @@ doctype html
 head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title Signup
-  link(href='/public/assets/bootstrap/css/bootstrap.css')
-  link(rel='stylesheet' href='/public/css/signup.css')
+  title Sign Up
+  link(href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/css/signup.css')
 h2 WELCOME TO DAYSTARDAYCARE
 p
   | At daystar daycare we believe that GOD is love and we extend that affection, passion and compassion
   | to the children entrusted to us
-img(src='/public/assets/images/EKEN DAYSTAR.png' alt='Logo' width='150' height='150')
+img(src='/assets/images/EKEN DAYSTAR.png' alt='Logo' width='150' height='150')
 .container
-  form
-    h3 Signup
-    .form-group
-      label.form-label(for='exampleinputName') Name
-      input.mb-3.form-control(type='text' placeholder='Full name' name='enterfullname')
-    br
-.form-group
-  label.form-label(for='exampleinputEBG') Education Background
-  input.mb-3.form-control(type='text' placeholder='Education Background' name='EBG')
-br
-.form-group
-  label.form-label(for='exampleinputExprience') Working Exprience
-  input.mb-3.form-control(type='text' placeholder='Working Exprience' name='periodspentworking')
-br
-.form-group
-  label(for='gender ')  
-  select#gender(name='gender')
-    option(value='') GENDER
-    option(value='male') male
-    option(value='female') female
-br
-.form-group
-  label.form-label(for='exampleinputemail') Email
-  input.mb-3.form-control(type='text' placeholder='Your Email' name='enteremail')
-br
-.form-group
-  label.form-label(for='exampleinputpassword') Password
-  input.mb-3.form-control(type='password' placeholder='write password' name='your password')
-br
-.form-group
-  label.form-label(for='exampleinputconfirmpassword') confirm password
-  input.mb-3.form-control(type='password' placeholder='' name='verifypassword')
-br
-div
-  button.btn.btn-primary(style='width:100px' ;='' type='submit') signup
-script(src='')
-script(src='/public/assets/bootstrap/js/bootstrap.bundle.js')
+  h3 Sign Up
+  .row
+    form#myform.col(novalidate='')
+      .row
+        .input-field.col
+          label.form-label(for='fullName') Name
+          input(type='text' name='Full Name' id='Full Name' onfocusout='validatefullname')
+          span.helper-text
+        br
+        label(for='gender ')  
+        select#gender(name='gender')
+          option(value='') GENDER
+          option(value='male') male
+          option(value='female') female
+      br
+      .row
+        .input-field.col
+          label.form-label(for='EducationBackGround') Education Background
+          input#EBG(type='text' name='EBG' onfocusout='EBG')
+          span.helper-text
+        br
+        .row
+          .input-field.col
+            label.form-label(for='placeofresidence') Place of Residence
+            input#RoP(type='text' name='Place of Residence')
+            span.helper-text
+          br
+          .row
+            .input-field.col
+              label.form-label(for='workingexprience') Working Exprience
+              input#WE(type='text' name='Working Exprience')
+              span.helper-text
+            br
+            .row
+              .input-field.col
+                label.form-label(for='email') Email
+                input#Email(type='text' name='Email')
+                span.helper-text
+              br
+              .row
+                .input-field.col
+                  label.form-label(for='password') Password
+                  input#Password(type='Password' name='Password')
+                  span.helper-text
+                br
+                .row
+                  .input-field.col
+                    label.form-label(for='password') Confirm Password
+                    input(type='Password' name='Confirm Password' id='Confirm Password')
+                    span.helper-text
+                  br
+                  div
+                    button.btn.btn-primary(type='submit') SignUp
+script(src='/js/signup.js')
+script(src='/assets/bootstrap/js/bootstrap.bundle.js')

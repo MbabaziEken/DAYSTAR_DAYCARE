@@ -13,56 +13,56 @@ img(src='/assets/images/EKEN DAYSTAR.png' alt='Logo' width='150' height='150')
 .container
   h3 Sign Up
   .row
-    form#myform.col(novalidate='')
+    form#myform.col(action='/signup' method='POST' novalidate='')
       .row
         .input-field.col
           label.form-label(for='fullName') Name
-          input(type='text' name='Full Name' id='Full Name' onfocusout='validatefullname')
+          input(type='text' name='FullName' id='FullName' onfocusout='validatefullname')
           span.helper-text
-        br
-        label(for='gender ')  
-        select#gender(name='gender')
-          option(value='') GENDER
-          option(value='male') male
-          option(value='female') female
-      br
+          br
+          label(for='gender ')  
+          select#gender(name='gender')
+            option(value='') GENDER
+            option(value='male') male
+            option(value='female') female
+          br
       .row
         .input-field.col
           label.form-label(for='EducationBackGround') Education Background
           input#EBG(type='text' name='EBG' onfocusout='EBG')
           span.helper-text
-        br
-        .row
-          .input-field.col
-            label.form-label(for='placeofresidence') Place of Residence
-            input#RoP(type='text' name='Place of Residence')
-            span.helper-text
           br
-          .row
-            .input-field.col
-              label.form-label(for='workingexprience') Working Exprience
-              input#WE(type='text' name='Working Exprience')
-              span.helper-text
-            br
-            .row
-              .input-field.col
-                label.form-label(for='email') Email
-                input#Email(type='text' name='Email')
-                span.helper-text
-              br
-              .row
-                .input-field.col
-                  label.form-label(for='password') Password
-                  input#Password(type='Password' name='Password')
-                  span.helper-text
-                br
-                .row
-                  .input-field.col
-                    label.form-label(for='password') Confirm Password
-                    input(type='Password' name='Confirm Password' id='Confirm Password')
-                    span.helper-text
-                  br
-                  div
-                    button.btn.btn-primary(type='submit') SignUp
+      .row
+        .input-field.col
+          label.form-label(for='placeofresidence') Place of Residence
+          input#RoP(type='text' name='PlaceofResidence')
+          span.helper-text
+          br
+      .row
+        .input-field.col
+          label.form-label(for='workingexprience') Working Exprience
+          input#WE(type='text' name='WorkingExprience')
+          span.helper-text
+          br
+      .row
+        .input-field.col
+          label.form-label(for='email') Email
+          input#Email(type='text' name='Email')
+          span.helper-text
+          br
+      .row
+        .input-field.col
+          label.form-label(for='password') Password
+          input#Password(type='Password' name='Password')
+          span.helper-text
+          br
+      .row
+        .input-field.col
+          label.form-label(for='password') Confirm Password
+          input(type='Password' name='ConfirmPassword' id='Confirm Password')
+          span.helper-text
+          br
+          div
+            button.btn.btn-primary(type='submit') SignUp
 script(src='/js/signup.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

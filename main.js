@@ -18,6 +18,9 @@ mongoose.connect(process.env.DATABASE,{})
     console.log('error connecting to DATABASE')
 })
 
+app.use(express.json({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
+
 const publicdir = path.join(__dirname, "./public");
 app.use(express.static(publicdir));
 

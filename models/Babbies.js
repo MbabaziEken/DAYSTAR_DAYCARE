@@ -37,6 +37,10 @@ const babbiesSchema = new Schema({
     allergies:{
         type:String,
         required:true, 
+    },
+    favorites:{
+        type:String,
+        required:true,
     }
 });
 

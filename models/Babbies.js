@@ -2,45 +2,46 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const babbiesSchema = new Schema({
-    name:{
+    Babyname:{
         type: String,
-        required: true,
-    },
-    gender:{
-        type:String,
-        required:true,
+        unique: true,
     },
     age:{
         type:String,
-        required:true,
+        trim:true,
     },
-    nextOfKin:{
+    gender:{
         type:String,
-        required:true,
+        trim:true,
     },
-    babbyNo:{
+    Favorites:{
         type:String,
-        required:true,
+        trim:true,
     },
-    parentsName:{
+    HealthStatus:{
         type:String,
-        required:true,
+        trim:true,
     },
-    parentsContact:{
+    ParentsContact:{
         type:String,
-        required:true,
+        trim:true,
     },
-    healthStatus:{
+    ParentsName:{
         type:String,
-        required:true,
+        trim:true,
     },
-    allergies:{
+    NextOfKin:{
         type:String,
-        required:true, 
+        trim:true,
     },
-    favorites:{
+    IdNo:{
         type:String,
-        required:true,
-    }
+        trim:true,
+    },
+    Allergies:{
+        type:String,
+        trim:true, 
+    },
 });
 
+module.exports = mongoose.model("Babbies",babbiesSchema);

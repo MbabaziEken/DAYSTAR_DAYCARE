@@ -40,9 +40,10 @@ input[type="text"],input[type="password"],input[type="name"],input[type="passwor
     margin: 0 500px;
     border-radius: 10px;
     text-decoration-line: none;
+    align-content: space-between;
 }
 
-label[class="form-label"]{
+label[class="form-label"],[for="gender"]{
     width: 50%;
     height: 50px;
     margin: 0 500px;

@@ -21,6 +21,21 @@ body, html {
     font-size: large;
 }
 
+#logoutBtn{
+    background-color: rgb(224, 223, 223);
+    color: grey;
+     margin-top: 15px;
+     padding: 15px 15px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: large;
+    text-decoration: none;
+}
+
+.logoutBtn{
+    margin-top: 35px;
+}
+
 h1{
     color: grey;
     text-align: center;
@@ -80,4 +95,8 @@ flex: 1; */
     padding-top: 50px;
      border-radius: 50px;
      
+}
+
+a{
+    text-decoration: none;
 }

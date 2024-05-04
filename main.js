@@ -2,8 +2,10 @@ const express = require("express");
 const app = express();
 const path = require ("path");
 const mongoose = require("mongoose");
+
 // rendering engine
 const pug = require("pug");
+
 // giving functionality for storing user sessions
 const expressSession = require("express-session");
 

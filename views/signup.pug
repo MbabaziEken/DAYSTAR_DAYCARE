@@ -20,12 +20,13 @@ img(src='/assets/images/EKEN DAYSTAR.png' alt='Logo' width='150' height='150')
           input(type='text' name='FullName' id='FullName' onfocusout='validatefullname')
           span.helper-text
           br
-          label(for='gender ')  
+          label.form-label(for='gender ') Gender
           select#gender(name='gender')
-            option(value='') GENDER
+            option(value='') 
             option(value='male') male
             option(value='female') female
           br
+
       .row
         .input-field.col
           label.form-label(for='EducationBackGround') Education Background

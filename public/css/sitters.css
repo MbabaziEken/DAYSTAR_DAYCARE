@@ -1,7 +1,7 @@
 body{
     padding: 0%;
     margin: 0%;
-    background-image: url(/public/assets/images/alphabet-word-images-1293193_640.png);
+    background-image: url(/assets/images/alphabet-word-images-1293193_640.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -16,7 +16,7 @@ body{
 #main{
     background-color: #FFB0EA;
     margin-top:40px ;
-    margin-left:600px ;
+    margin-left:550px ;
     padding-top: 20px;
     width: 20%;
     border-radius: 0px;
@@ -48,23 +48,23 @@ p{
 } 
 
 input[type="text"]{
-            margin: 0px 35px ;
+            margin: 0px 30px ;
             width: 80%; 
             height: 30px;
             border-radius: 10px;
 } 
 
 input[type="number"]{
-           margin: 0px 35px;
+           margin: 0px 30px;
            width: 80%; 
            height: 30px;
            border-radius: 10px;
 }
 
 select[id=gender]{
-    margin:0px 35px;
-    width: 80%; 
-    height: 30px;
+    margin:0px 30px;
+    width: 83%; 
+    height: 38px;
     border-radius: 10px;
 }
 

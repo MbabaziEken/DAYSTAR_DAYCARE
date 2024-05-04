@@ -1,0 +1,58 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sitter&apos;s
+  link(href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/css/sitters.css')
+#main
+  #container
+    #rol
+    h5 SITTERS FORM
+    form#submit.entry-form(action='sitters.html')
+      .input
+        label(for='sitters-name')  
+        input.sitters-text-form(type='text' placeholder='FULLNAME' name='fullname')
+      br
+      .form-group
+        label(for='sitters-age')
+        input.sitters-text-form(type='number' placeholder='AGE' name='age')
+      br
+      .form-group
+        label(for='gender ')
+        select#gender(name='gender')
+          option(value='') GENDER
+          option(value='male') male
+          option(value='female') female
+      br
+      .form-group
+      label(for='education-background')  
+      input.sitters-text-form(type='text' placeholder='EDUCATION BACKGROUND' name='academicprogress')
+  br
+  .form-group
+    label(for='location')  
+    input.sitters-text-form(type='text' placeholder='LOCATION' name='placeofresidence')
+  br
+  .form-group
+    label(for='contact')  
+    input.sitters-text-form(type='text' placeholder='CONTACT' name='phoneno.')
+  br
+  .form-group
+    label(for='ninno.')  
+    input.sitters-text-form(type='text' placeholder='NINno.' name='idno.')
+  br
+  .form-group
+    label(for='next-of-kin')  
+    input.sitters-text-form(type='text' placeholder='NEXT OF KIN' name='nextofkin')
+  br
+  .form-group
+    label(for="next-of-kin's-contact")  
+    input.sitters-text-form(type='text' placeholder="NEXT OF KIN'S CONTACT" name='phonenumber')
+  br
+  .form-group
+    label(for="recommender'sitters-name")  
+    input.sitters-text-form(type='text' placeholder="RECOMMENDER'S NAME" name='referees')
+  br
+  button.btn-primary(type='submit') register
+script(src='/js/sitters.js')
+script(src='/assets/bootstrap/js/bootstrap.bundle.js')

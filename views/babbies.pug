@@ -10,14 +10,14 @@ head
   #container
     #rol
     h5 BABBIES FORM
-    form#submit.entry-form(action='babbies.html')
+    form#submit.entry-form(action='/babbies' method='POST')
       .input
         label(for='babbies-name')  
-        input.babbies-text-form(type='text' placeholder='FULLNAME' name='Enterbabayname')
+        input.babbies-text-form(type='text' placeholder='BABYNAME' name='Babyname' id='Babyname')
       br
       .form-group
         label(for='babbies-age')
-        input.sitters-text-form(type='number' placeholder='AGE')
+        input.babbies-text-form(type='number' placeholder='AGE' name='Age' id='Age')
       br
       .form-group
         label(for='gender ')  
@@ -27,29 +27,35 @@ head
           option(value='female') female
       br
       .form-group
-      label(for='favorites')  
-      input.sitters-text-form(type='text' placeholder='FAVORITES' name='babbieslikes')
-  br
-  .form-group
-    label(for='health-status')  
-    input.sitters-text-form(type='text' placeholder='HEALTH STATUS' name='Enter health difficulties if any')
-  br
-  .form-group
-    label(for="parent's-contact")  
-    input.sitters-text-form(type='text' placeholder="PARENT'S CONTACT" name='contactdetails')
-  br
-  .form-group
-    label(for="parent's-name")  
-    input.babbies-text-form(type='text' placeholder="PARENT'S NAME" name='both names')
-  br
-  .form-group
-    label(for='next-of-kin')  
-    input.sitters-text-form(type='text' placeholder='NEXT OF KIN' name='anyoneelsetopickupthebabby')
-  br
-  .form-group
-    label(for='babby-number')  
-    input.sitters-text-form(type='text' placeholder='BABBY NUMBER' name='idno')
-  br
-  button.btn-primary(type='submit') register
+        label(for='favorites')  
+        input.babbies-text-form(type='text' placeholder='FAVORITES' name='BabbiesLikes' id='BabbiesLikes')
+      br
+      .form-group
+        label(for='health-status')  
+        input.babbies-text-form(type='text' placeholder='HEALTH STATUS' name='HealthStatus' id='HealthStatus')
+      br
+      .form-group
+        label(for="parent's-contact")  
+        input.babbies-text-form(type='text' placeholder="PARENT'S CONTACT" name='ParentsContact' id='ParentsContact')
+      br
+      .form-group
+        label(for="parent's-name")  
+        input.babbies-text-form(type='text' placeholder="PARENT'S NAME" name='ParentsName' id='ParentsName')
+      br
+      .form-group
+        label(for='next-of-kin')  
+        input.babbies-text-form(type='text' placeholder='NEXT OF KIN' name='NextOfKin' id='NextOfKin')
+      br
+      .form-group
+        label(for='babby-number')  
+        input.babbies-text-form(type='text' placeholder='BABBY NUMBER' name='IdNo' id='IdNo')
+      br
+
+      .form-group
+        label(for='allergies')  
+        input.babbies-text-form(type='text' placeholder='ALLERGIES' name='Allergies' id='Allergies')
+
+      br
+      button.btn-primary(type='submit') register
 script(src='/js/babbies.js')
 script(src='/assets/boostrap/js/boostrap.bundle.js')

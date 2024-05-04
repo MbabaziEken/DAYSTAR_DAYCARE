@@ -3,26 +3,30 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Super Admin Dashboard
+  link(href='/assets/bootstrap/css/bootstrap.css')
   link(rel='stylesheet' href='/css/Admin.css')
 .dashboard
   #main
     #navbar
-      ul
-        il
-          a.button(href='/views/logout.html') Logout
+      div
+        ul.logoutBtn
+          il
+            a#logoutBtn(href='/logout') logout
     h1 Daystar Admin Dashboard
     #content
       #left
         img(src='/assets/images/babbies.jpg' width='190')
-        a(href='/views/babbies.html') BABBIES
+        a(href='/babbies') BABBIES
         img(src='/assets/images/parents.jpg' width='200' height='140')
-        a(href='/views/parents.html') PARENTS
+        a(href='/parents') PARENTS
       #right
         img(src='/assets/images/sittars.jpg' width='200')
-        a(href='/views/sitters.html') SITTERS
+        a(href='/sitters') SITTERS
         img(src='/assets/images/payments.png' width='170' height='130')
-        a(href='/views/payments.html') PAYMENTS
+        a(href='/payments') PAYMENTS
       #middle
         img(src='/assets/images/bg.jpg' width='200')
-        a(href='/views/dollstall.html') DOLLSTALL
+        a(href='/dollstall') DOLLSTALL
     #footer  
+    script(src='/js/Admin.js')
+    script(src='/assets/bootstrap/js/bootstrap.bundle.js')

@@ -11,13 +11,13 @@ p
   | to the children entrusted to us
 img(src='/assets/images/EKEN DAYSTAR.png' alt='Logo' width='150' height='150')
 .container
-  h3 Sign Up
+  h3 SignUp
   .row
-    form#myform.col(action='/signup' method='POST' novalidate='')
+    form#myform.col(action='/Adminregister' method='POST' )
       .row
         .input-field.col
           label.form-label(for='fullName') Name
-          input(type='text' name='FullName' id='FullName' onfocusout='validatefullname')
+          input(type='text' name='fullName' id='FullName')
           span.helper-text
           br
           label.form-label(for='gender ') Gender
@@ -30,7 +30,7 @@ img(src='/assets/images/EKEN DAYSTAR.png' alt='Logo' width='150' height='150')
       .row
         .input-field.col
           label.form-label(for='EducationBackGround') Education Background
-          input#EBG(type='text' name='EBG' onfocusout='EBG')
+          input#EBG(type='text' name='EBG' )
           span.helper-text
           br
       .row
@@ -48,7 +48,7 @@ img(src='/assets/images/EKEN DAYSTAR.png' alt='Logo' width='150' height='150')
       .row
         .input-field.col
           label.form-label(for='email') Email
-          input#Email(type='text' name='Email')
+          input#Email(type='text' name='email')
           span.helper-text
           br
       .row

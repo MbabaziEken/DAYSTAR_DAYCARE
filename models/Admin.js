@@ -3,7 +3,7 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const Schema = mongoose.Schema;
 
 const adminSchema = new Schema({
-    name:{
+    fullName:{
         type: String,
         required: true,
     },
@@ -11,15 +11,15 @@ const adminSchema = new Schema({
         type:String,
         required:true,
     },
-    educationBg:{
+    EBG:{
         type:String,
         required:true,
     },
-    workingExp:{
+    WorkingExprience:{
         type:String,
         required:true,
     },
-    placeOfResidence:{
+    PlaceofResidence:{
         type:String,
         required:true,
     },
@@ -27,7 +27,7 @@ const adminSchema = new Schema({
         type:String,
         required:true,
         unique:true,
-    },
+    }
 });
 
 adminSchema.plugin(passportLocalMongoose,{

@@ -1,3 +1,13 @@
+req.body.Password,(err,admin) =>{
+            if(err){
+                res.json({message:err});
+            }else {
+                console.log("new admin registered")
+                res.json({message:"new admin sucessfully registered"})
+                next()
+    } 
+}
+https://csejs3.onrender.com
 Admin
 name
 gender

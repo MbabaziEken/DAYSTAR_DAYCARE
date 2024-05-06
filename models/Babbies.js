@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 const babbiesSchema = new Schema({
     Babyname:{
         type: String,
-        unique: true,
+        trim: true,
     },
-    age:{
+    Age:{
         type:String,
         trim:true,
     },

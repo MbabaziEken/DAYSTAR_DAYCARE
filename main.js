@@ -1,37 +1,66 @@
-const express = require("express");
-const app = express();
-const path = require ("path");
-const mongoose = require("mongoose");
+// dependency
+// for posting
+const express = require('express'); 
+// for mongodb
+const mongoose = require('mongoose');
+//for pug 
+const path = require('path'); 
+//for passport
+const passport = require('passport');
+//for moment 
+const moment = require('moment');
+ 
+// for express-session
+const expressSession = require('express-session')({ 
+  secret:"secret",
+  resave: false,
+  saveUninitialized: false
+});
+
+require("dotenv").config();
+// importing admin model
+const admin = require("../DAYSTAR_DAYCARE/models/Admin");
+
+// importing routes
+const adminregisterationRoutes = require("./routes/AdminRegRoutes");
+const babyroutes = require("./routes/BabbiesRoutes");
 
 // rendering engine
-const pug = require("pug");
+const app = express();
 
-// giving functionality for storing user sessions
-const expressSession = require("express-session");
+// for static files in dir public
+  app.use(express.static(path.join(__dirname, "public")))
 
-require("dotenv").config()
+  app.use(express.urlencoded({extended: true}));
+  app.use(express.json());
 
-// mongoose configurations
-mongoose.connect(process.env.DATABASE,{})
-.then(() => {
-    console.log('connected to DATABASE')
-})
-.catch(() => {
-    console.log('error connecting to DATABASE')
-})
+//ways of tracking user usage
+passport.serializeUser(admin.serializeUser());
+//breaking system when user logs out 
+passport.deserializeUser(admin.deserializeUser());
 
-app.use(express.json({ extended: false }));
-app.use(express.urlencoded({ extended: true }));
+// express session configurations
+app.use(expressSession);
+app.use(passport.initialize());
+app.use(passport.session());
 
-const publicdir = path.join(__dirname, "./public");
-app.use(express.static(publicdir));
+//Passport Configurations
+passport.use(admin.createStrategy());
 
-app.set("view engine","pug");
+mongoose.connect("mongodb+srv://mbabazieken:kashera2023@cluster0.x3cma6f.mongodb.net/daystar", {
+  }).then(() => 
+console.log('mongodbconnected'))
+ .catch(() =>
+console.log('mongodb not connected'))
 
+// for static files in dir public
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views")); 
 
-// these are routes
-app.use("/", require("./routes/mainRoutes"));
+// routes setup. using the imported registration routes for requests
+app.use("/", adminregisterationRoutes);
+app.use("/", babyroutes);
 
-app.listen(4000,() => {
-    console.log ("server is running on port 4000")
+app.listen(4000, () => {
+  console.log("server is running on port 4000");
 });

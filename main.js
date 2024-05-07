@@ -9,7 +9,8 @@ const path = require('path');
 const passport = require('passport');
 //for moment 
 const moment = require('moment');
- 
+
+
 // for express-session
 const expressSession = require('express-session')({ 
   secret:"secret",
@@ -18,13 +19,18 @@ const expressSession = require('express-session')({
 });
 
 require("dotenv").config();
+
 // importing admin model
 const admin = require("../DAYSTAR_DAYCARE/models/Admin");
+const parents = require("../DAYSTAR_DAYCARE/models/Parents");
 
 // importing routes
 const adminregisterationRoutes = require("./routes/AdminRegRoutes");
+const authRoutes = require("./routes/AuthRoutes")
 const babyroutes = require("./routes/BabbiesRoutes");
-
+const sittersroutes = require("./routes/SittersRoutes");
+const parentsroutes = require("./routes/ParentRoutes");
+const dashbroutes = require("./routes/dashbRoutes");
 // rendering engine
 const app = express();
 
@@ -60,6 +66,10 @@ app.set("views", path.join(__dirname, "views"));
 // routes setup. using the imported registration routes for requests
 app.use("/", adminregisterationRoutes);
 app.use("/", babyroutes);
+app.use("/", sittersroutes);
+app.use("/", authRoutes);
+app.use("/", parentsroutes);
+app.use("/", dashbroutes);
 
 app.listen(4000, () => {
   console.log("server is running on port 4000");

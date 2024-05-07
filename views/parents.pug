@@ -9,22 +9,22 @@ head
   #container
     #rol
     h5 PARENTS FORM
-    form.entry-form(action='parents.html')
+    form.entry-form(action='/parents' method='POST')
       .input
         label(for='parents')  
-        input.parents-text-form(type='text' placeholder='FULLNAME' name='enteryourname')
+        input.parents-text-form(type='text' placeholder='enteryourname' name='Parentsname')
       br
       .form-group
         label(for='parents')  
-        input.parents-text-form(type='text' placeholder=" BABY'S NAME" name='enteryourbabbiesname')
+        input.parents-text-form(type='text' placeholder="enteryourbabbiesname" name='BabyName')
       br
       .form-group
         label(for='sitters-age')
-        input.parents-text-form(type='number' placeholder='AGE' name='enteryourage')
+        input.parents-text-form(type='number' placeholder='enteryourage' name='Age')
       br
       .form-group
         label(for='gender ')  
-        select#gender(name='gender')
+        select#gender(name='Gender')
           option(value='') GENDER
           option(value='male') male
           option(value='female') female
@@ -32,24 +32,24 @@ head
       br
       .form-group
       label(for='NIN.no.')  
-      input.parents-text-form(type='text' placeholder='NIN.no.' name='enteryourNIN')
-  br
-  .form-group
-    label(for='location')  
-    input.parents-text-form(type='text' placeholder='LOCATION' name='place of residence')
-  br
-  .form-group
-    label(for='contact')  
-    input.parents-text-form(type='text' placeholder='CONTACT' name='phonenumber')
-  br
-  .form-group
-    label(for='next-of-kin')  
-    input.parents-text-form(type='text' placeholder='NEXT OF KIN' name='writeyournextofkin')
-  br
-  .form-group
-    label(for="next-of-kin's-contact")  
-    input.parents-text-form(type='text' placeholder="NEXT OF KIN'S CONTACT" name='theirphonenumber')
-  br
-  button.btn-primary register
+      input.parents-text-form(type='text' placeholder='enteryourNIN' name='nin')
+      br
+      .form-group
+        label(for='location')  
+        input.parents-text-form(type='text' placeholder='place of residence' name='Location')
+      br
+      .form-group
+        label(for='contact')  
+        input.parents-text-form(type='text' placeholder='CONTACT' name='Contact')
+      br
+      .form-group
+        label(for='next-of-kin')  
+        input.parents-text-form(type='text' placeholder='writeyournextofkin' name='NextOfKin')
+      br
+      .form-group
+        label(for="next-of-kin's-contact")  
+        input.parents-text-form(type='text' placeholder="theirphonenumber" name='NextOfKinsContact')
+      br
+      button.btn-primary register
 script(src='../javascript/parents.js')
 script(src='/assets/boostrap/js/boostrap.bundle.js')

@@ -1,3 +1,14 @@
+a{
+    background-color:blueviolet;
+    color: rgb(29, 29, 1);
+    width: 100px;
+    height: 60px;
+    border-radius: 5px;
+    margin:20px 350px ;
+    text-decoration: none;
+    font-size: xx-large;
+}
+
 req.body.Password,(err,admin) =>{
             if(err){
                 res.json({message:err});

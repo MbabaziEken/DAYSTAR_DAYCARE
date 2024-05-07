@@ -2,8 +2,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-const sittersSchema = new Schema({
-    SitterName:{
+const parentsSchema = new Schema({
+    ParentsName:{
+        type: String,
+        trim: true,
+    },
+    BabyName:{
         type: String,
         trim: true,
     },
@@ -15,11 +19,7 @@ const sittersSchema = new Schema({
         type:String,
         trim:true,
     },
-    EducationBackground:{
-        type:String,
-        trim:true,
-    },
-    Location:{
+        Location:{
         type:String,
         trim:true,
     },
@@ -37,14 +37,10 @@ const sittersSchema = new Schema({
         type:String,
         trim:true,
     },
-    RecommendersName:{
-        type:String,
-        trim:true,
-    },
-    RecommendersContact:{
+        NextOfKinsContact:{
         type:String,
         trim:true,
     }
 });
 
-module.exports=mongoose.model("Sitters",sittersSchema);
+module.exports=mongoose.model("Parents",parentsSchema);

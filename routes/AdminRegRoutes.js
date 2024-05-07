@@ -24,11 +24,4 @@ router.post("/Adminregister", async(req,res,next) => {
 );
 
 
-
-
-
-
-
-
-
 module.exports = router;

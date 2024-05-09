@@ -7,7 +7,7 @@ const AdminModel = require("../models/Admin");
 
 // creating get routes
 router.get("/Adminregister", (req, res) => {
-    res.render("signup");
+    res.render("login");
 });
 
 router.post("/Adminregister", async(req,res,next) => {
@@ -16,7 +16,7 @@ router.post("/Adminregister", async(req,res,next) => {
         console.log(admin)
         await AdminModel.register(admin,req.body.Password)
     }catch(error){
-        res.status(400).Send ("cound't register admin")
+        res.status().Send ("cound't register admin")
         console.log(error)
     }
 }

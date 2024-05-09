@@ -68,6 +68,13 @@ select[id=gender]{
     border-radius: 10px;
 }
 
+select[id=religion]{
+    margin:0px 30px;
+    width: 83%; 
+    height: 38px;
+    border-radius: 10px;
+}
+
 button[class="btn-primary"]{
     background-color: rgb(243, 9, 204);
     color: rgb(5, 171, 248);
@@ -77,5 +84,9 @@ button[class="btn-primary"]{
     margin:0px 100px ;
 }
 
-
+.error{
+    color: red;
+    text-align: center;
+    margin-left:  100px;
+}
 

@@ -22,12 +22,12 @@
   <div class="container">
     <h3>Sign Up</h3>
     <div class="row">
-      <form class="col" id="myform" novalidate>
+      <form action="/Adminregister">
         <div class="row">
           <div class=" input-field col">
           <label class="form-label" for="fullName">Name</label>
-          <input type="text" name="Full Name" id="Full Name" onfocusout="validatefullname"/>
-          <span class="helper-text"></span>
+          <input type="text" name="Full Name" id="FullName"/>
+          <span id="FullNameError" class="error"></span>
           </div>
           <br>
 
@@ -37,14 +37,15 @@
             <option value="male">male</option>
             <option value="female">female</option>
             </select>
+            <span id="genderError" class="error"></span>
           </div>
             <br>
 
           <div class="row">
             <div class=" input-field col">
             <label class="form-label"    for="EducationBackGround">Education Background</label>
-            <input type="text" name="EBG" id="EBG" onfocusout="EBG"/>
-            <span class="helper-text"></span>
+            <input type="text" name="EBG" id="EBG" />
+            <span id="EBGError" class="error"></span>
           </div>
             <br>
 
@@ -52,7 +53,7 @@
               <div class=" input-field col">
               <label class="form-label"  for="placeofresidence">Place of Residence</label>
               <input type="text" name="Place of Residence" id="RoP"/>
-              <span class="helper-text"></span>
+              <span id="RoPError" class="error"></span>
             </div>
               <br>
 
@@ -60,7 +61,7 @@
                 <div class=" input-field col">
                 <label class="form-label" for="workingexprience">Working Exprience</label>
                 <input type="text" name="Working Exprience" id="WE"/>
-                <span class="helper-text"></span>
+                <span id="WEError" class="error"></span>
               </div>
                 <br>
 
@@ -68,7 +69,7 @@
                   <div class=" input-field col">
                   <label class="form-label" for="email">Email</label>
                   <input type="text" name="Email" id="Email"/>
-                  <span class="helper-text"></span>
+                  <span id="EmailError" class="error"></span>
                 </div>
                   <br>
 
@@ -76,7 +77,7 @@
                     <div class=" input-field col">
                     <label class="form-label" for="password">Password</label>
                     <input type="Password" name="Password" id="Password"/>
-                    <span class="helper-text"></span>
+                    <span id="PasswordError" class="error"></span>
                   </div>
                     <br>
 
@@ -84,7 +85,7 @@
                       <div class=" input-field col">
                       <label class="form-label" for="password">Confirm Password</label>
                       <input type="Password" name="Confirm Password" id="Confirm Password"/>
-                      <span class="helper-text"></span>
+                      <span id="ConfirmPasswordError" class="error"></span>
                     </div>
                       <br>
 

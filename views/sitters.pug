@@ -9,14 +9,21 @@ head
   #container
     #rol
     h5 SITTERS FORM
-    form#submit.entry-form(action='/sitters' method=('POST'))
+    form#submit.entry-form(onsubmit='return validationForm()' action='/sitters' method='POST' )
       .input
         label(for='sitters-name')  
-        input.sitters-text-form(type='text' placeholder='SITTERNAME' name='SitterName')
+        input.sitters-text-form(type='text' placeholder='SITTER NAME' name='SitterName' id='name')
+        span#nameError.error
       br
       .form-group
         label(for='sitters-age')
-        input.sitters-text-form(type='number' placeholder='AGE' name='Age')
+        input.sitters-text-form(type='number' placeholder='AGE' name='Age' id='age')
+        span#ageError.error
+      br
+      .form-group
+        label(for='sitters-number')
+        input.sitters-text-form(type='number' placeholder='SITTER NUMBER' name='sitternumber' id='sitterNumber')
+        span#sitterNumberError.error
       br
       .form-group
         label(for='gender ')
@@ -24,36 +31,55 @@ head
           option(value='') GENDER
           option(value='male') male
           option(value='female') female
+        span#genderError.error
       br
       .form-group
-      label(for='education-background')  
-      input.sitters-text-form(type='text' placeholder='EDUCATION BACKGROUND' name='EducationBackground')
+        label(for='religion')
+        select#religion(name='religion')
+          option(value='') RELIGION
+          option(value='Christian') Christian
+          option(value='Moslem') Moslem
+          option(value='Orthodox') Orthodox
+          option(value='Protestant') Protestant
+          option(value='Catholic') Catholic
+        span#religionError.error
+      br
+      .form-group
+        label(for='education-background')  
+        input.sitters-text-form(type='text' placeholder='EDUCATION BACKGROUND' name='EducationBackground' id='education')
+        span#eduError.error
       br
       .form-group
         label(for='location')  
-        input.sitters-text-form(type='text' placeholder='LOCATION' name='Location')
+        input.sitters-text-form(type='text' placeholder='LOCATION' name='Location' id='location')
+        span#locationError.error
       br
       .form-group
         label(for='contact')  
-        input.sitters-text-form(type='text' placeholder='CONTACT' name='Contact')
+        input.sitters-text-form(type='text' placeholder='CONTACT' name='Contact' id='contact')
+        span#contactError.error
       br
       .form-group
         label(for='ninno.')  
-        input.sitters-text-form(type='text' placeholder='NINno.' name='nin')
+        input.sitters-text-form(type='text' placeholder='NINno.' name='nin' id='nin')
+        span#ninError.error
       br
       .form-group
         label(for='next-of-kin')  
-        input.sitters-text-form(type='text' placeholder='NEXT OF KIN' name='NextOfKin')
+        input.sitters-text-form(type='text' placeholder='NEXT OF KIN' name='NextOfKin' id='nextOfKin')
+        span#nextofkinError.error
       br
       .form-group
         label(for="recommender'sitters-name")  
         input.sitters-text-form(type='text' placeholder="RECOMMENDER'S NAME" 
-        name='RecommendersName')
+        name='RecommendersName' id='recommender')
+        span#recommendersnameError.error
       br
       .form-group
         label(for="recommender'sitters-name")  
-        input.sitters-text-form(type='text' placeholder="RECOMMENDER'S CONTACT" name='RecommendersContact')
+        input.sitters-text-form(type='text' placeholder="RECOMMENDER'S CONTACT" name='RecommendersContact' id='recommenderscontact')
+        span#recommenderscontactError.error
       br
       button.btn-primary(type='submit') register
-script(src='/js/sitters.js')
+script(src='/js/sittersvalidation.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

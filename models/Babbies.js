@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const babbiesSchema = new Schema({
-    Babyname:{
+    babyName:{
         type: String,
         trim: true,
     },
-    Age:{
+    age:{
         type:String,
         trim:true,
     },
@@ -14,34 +14,60 @@ const babbiesSchema = new Schema({
         type:String,
         trim:true,
     },
-    Favorites:{
+    favorites:{
         type:String,
         trim:true,
     },
-    HealthStatus:{
+    healthStatus:{
         type:String,
         trim:true,
     },
-    ParentsContact:{
+    parentsContact:{
         type:String,
         trim:true,
     },
-    ParentsName:{
+    parentsName:{
         type:String,
         trim:true,
     },
-    NextOfKin:{
+    nextOfKin:{
         type:String,
         trim:true,
     },
-    IdNo:{
+    idNo:{
         type:String,
         trim:true,
     },
-    Allergies:{
+    allergies:{
         type:String,
         trim:true, 
     },
+    assignedSitter:{
+        type:String,
+        trim:true, 
+    },
+    checkIn:{
+        type:String,
+        trim:true, 
+    },
+    checkOut:{
+        type:String,
+        trim:true, 
+    },
+    timeSpent:{
+        type:String,
+        trim:true, 
+    },
+    broughtBy:{
+        type:String,
+        trim:true, 
+    },
+    pickedBy:{
+        type:String,
+        trim:true, 
+    },
+    
+    
 });
 
 module.exports = mongoose.model("Babbies",babbiesSchema);

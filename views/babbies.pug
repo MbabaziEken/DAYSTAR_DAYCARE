@@ -13,11 +13,11 @@ head
     form#submit.entry-form(action='/babbies' method='POST')
       .input
         label(for='babbies-name')  
-        input.babbies-text-form(type='text' placeholder='BABYNAME' name='Babyname' id='Babyname')
+        input.babbies-text-form(type='text' placeholder='BABYNAME' name='babyName' id='Babyname')
       br
       .form-group
         label(for='babbies-age')
-        input.babbies-text-form(type='number' placeholder='AGE' name='Age' id='Age')
+        input.babbies-text-form(type='number' placeholder='AGE' name='age' id='Age')
       br
       .form-group
         label(for='gender ')  
@@ -28,32 +28,55 @@ head
       br
       .form-group
         label(for='favorites')  
-        input.babbies-text-form(type='text' placeholder='FAVORITES' name='Favorites' id='Favorites')
+        input.babbies-text-form(type='text' placeholder='FAVORITES' name='favorites' id='Favorites')
       br
       .form-group
         label(for='health-status')  
-        input.babbies-text-form(type='text' placeholder='HEALTH STATUS' name='HealthStatus' id='HealthStatus')
+        input.babbies-text-form(type='text' placeholder='HEALTH STATUS' name='healthStatus' id='HealthStatus')
       br
       .form-group
         label(for="parent's-contact")  
-        input.babbies-text-form(type='text' placeholder="PARENT'S CONTACT" name='ParentsContact' id='ParentsContact')
+        input.babbies-text-form(type='text' placeholder="PARENT'S CONTACT" name='parentsContact' id='ParentsContact')
       br
       .form-group
         label(for="parent's-name")  
-        input.babbies-text-form(type='text' placeholder="PARENT'S NAME" name='ParentsName' id='ParentsName')
+        input.babbies-text-form(type='text' placeholder="PARENT'S NAME" name='parentsName' id='ParentsName')
       br
       .form-group
         label(for='next-of-kin')  
-        input.babbies-text-form(type='text' placeholder='NEXT OF KIN' name='NextOfKin' id='NextOfKin')
+        input.babbies-text-form(type='text' placeholder='NEXT OF KIN' name='nextOfKin' id='NextOfKin')
       br
       .form-group
         label(for='babby-number')  
-        input.babbies-text-form(type='text' placeholder='BABBY NUMBER' name='IdNo' id='IdNo')
+        input.babbies-text-form(type='text' placeholder='BABBY NUMBER' name='idNo' id='IdNo')
       br
-
       .form-group
         label(for='allergies')  
-        input.babbies-text-form(type='text' placeholder='ALLERGIES' name='Allergies' id='Allergies')
+        input.babbies-text-form(type='text' placeholder='ALLERGIES' name='allergies' id='Allergies')
+      br
+      .form-group
+        label(for='assigned')  
+        input.babbies-text-form(type='text' placeholder='ASSIGNED SITTER' name ='assignedSitter' id='assignedSitter')
+      br
+      .form-group
+        label(for='checkin')  
+        input.babbies-text-form(type='text' placeholder='CHECKIN' name='checkIn' id='checkin')
+      br
+      .form-group
+        label(for='checkout')  
+        input.babbies-text-form(type='text' placeholder='CHECKOUT' name='checkOut' id='checkout')
+      br
+      .form-group
+        label(for='timespent')  
+        input.babbies-text-form(type='text' placeholder='TIME SPENT' name='timeSpent' id='timespent')
+      br
+      .form-group
+        label(for='broughtby')  
+        input.babbies-text-form(type='text' placeholder='BROUGHTBY' name='broughtBy' id='broughtby')
+      br
+      .form-group
+        label(for='pickedby')  
+        input.babbies-text-form(type='text' placeholder='PICKEDBY' name='pickedBy' id='pickedby')
 
       br
       button.btn-primary(type='submit') register

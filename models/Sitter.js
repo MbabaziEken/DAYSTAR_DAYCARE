@@ -3,47 +3,55 @@ const Schema = mongoose.Schema;
 
 
 const sittersSchema = new Schema({
-    SitterName:{
+    sitterName:{
         type: String,
         trim: true,
+        unique:true,
     },
-    Gender:{
+    gender:{
         type:String,
            trim:true,
     },
-    Age:{
+    age:{
         type:String,
         trim:true,
     },
-    EducationBackground:{
+    educationBackground:{
         type:String,
         trim:true,
     },
-    Location:{
+    location:{
         type:String,
         trim:true,
     },
-    Contact:{
+    contact:{
         type:String,
         trim:true,
-        unique:true,
     },
     nin:{
         type:String,
         trim:true,
     },
 
-    NextOfKin:{
+    nextOfKin:{
         type:String,
         trim:true,
     },
-    RecommendersName:{
+    recommendersName:{
         type:String,
         trim:true,
     },
-    RecommendersContact:{
+    recommendersContact:{
         type:String,
         trim:true,
+    },
+    sitterNumber:{
+        type:String,
+        trim:true,
+    },
+    availability:{
+        type:Boolean,
+        default:false,
     }
 });
 

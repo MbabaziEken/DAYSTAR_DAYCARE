@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const ensurelogin = require('connect-ensure-login')
+
 
 // import model
 const AdminModel = require("../models/Admin");
@@ -90,7 +92,7 @@ router.get("/parents", (req, res) => {
  });
 
  // administration routes
-  router.get("/Admin/", (req, res) => {
+  router.get("/Admin", ensurelogin, (req, res) => {
     res.render("Admin", { title: "Admin" });
   });
 

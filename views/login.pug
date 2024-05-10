@@ -13,7 +13,7 @@ head
   .container
     .row
       .col
-        form#login
+        form#login(onsubmit='validationForm()' action='/login' method='POST')
           .input
             label.form-label Email
             input.form-control(name='email' type='text' placeholder='')
@@ -21,8 +21,8 @@ head
             label.form-label(name='password') Password
             input.form-control(name='password' type='password' placeholder='')
           #login-message
-            ul
-              il
-                a(href='/admin') Login
-script(src='../javascript/login.js')
+            button(type='submit') Login
+              
+                
+script(src='/js/loginvalidation.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

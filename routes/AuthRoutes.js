@@ -7,8 +7,9 @@ router.get("/login", (req, res) => {
     res.render("login")
 });
 
-router.post("/login",passport.authenticate("cloud",{failureRedirect:"/login"}), (req, res) => {
-   res.redirect("/babbies")
+router.post("/login",passport.authenticate("local",{failureRedirect:"/login"}), (req, res) => {
+   res.redirect("/Admin")
+   console.log(req.user)
 });
 
 router.get("/logout", (req,res) => {

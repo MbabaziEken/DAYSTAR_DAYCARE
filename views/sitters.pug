@@ -80,6 +80,16 @@ head
         input.sitters-text-form(type='text' placeholder="RECOMMENDER'S CONTACT" name='RecommendersContact' id='recommenderscontact')
         span#recommenderscontactError.error
       br
+      .form-group
+        label(for="sitters-number")  
+        input.sitters-text-form(type='text' placeholder="SITTER NUMBER" name='sitterNumber' id='sitternumber')
+        span#sitternumberError.error
+      br
+      .form-group
+        label(for="sitters-availability")  
+        input.sitters-text-form(type='text' placeholder="AVAILABILITY" name='availability' id='availability')
+        span#availabilityError.error
+      br
       button.btn-primary(type='submit') register
 script(src='/js/sittersvalidation.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

@@ -12,22 +12,17 @@ head
     form#submit.entry-form(onsubmit='return validationForm()' action='/sitters' method='POST' )
       .input
         label(for='sitters-name')  
-        input.sitters-text-form(type='text' placeholder='SITTER NAME' name='SitterName' id='name')
+        input.sitters-text-form(type='text' placeholder='SITTER NAME' name='sitterName' id='name')
         span#nameError.error
       br
       .form-group
         label(for='sitters-age')
-        input.sitters-text-form(type='number' placeholder='AGE' name='Age' id='age')
+        input.sitters-text-form(type='number' placeholder='AGE' name='age' id='age')
         span#ageError.error
       br
       .form-group
-        label(for='sitters-number')
-        input.sitters-text-form(type='number' placeholder='SITTER NUMBER' name='sitternumber' id='sitterNumber')
-        span#sitterNumberError.error
-      br
-      .form-group
         label(for='gender ')
-        select#gender(name='Gender')
+        select#gender(name='gender')
           option(value='') GENDER
           option(value='male') male
           option(value='female') female
@@ -46,17 +41,17 @@ head
       br
       .form-group
         label(for='education-background')  
-        input.sitters-text-form(type='text' placeholder='EDUCATION BACKGROUND' name='EducationBackground' id='education')
+        input.sitters-text-form(type='text' placeholder='EDUCATION BACKGROUND' name='educationBackground' id='education')
         span#eduError.error
       br
       .form-group
         label(for='location')  
-        input.sitters-text-form(type='text' placeholder='LOCATION' name='Location' id='location')
+        input.sitters-text-form(type='text' placeholder='LOCATION' name='location' id='location')
         span#locationError.error
       br
       .form-group
         label(for='contact')  
-        input.sitters-text-form(type='text' placeholder='CONTACT' name='Contact' id='contact')
+        input.sitters-text-form(type='text' placeholder='CONTACT' name='contact' id='contact')
         span#contactError.error
       br
       .form-group
@@ -66,18 +61,18 @@ head
       br
       .form-group
         label(for='next-of-kin')  
-        input.sitters-text-form(type='text' placeholder='NEXT OF KIN' name='NextOfKin' id='nextOfKin')
+        input.sitters-text-form(type='text' placeholder='NEXT OF KIN' name='nextOfKin' id='nextOfKin')
         span#nextofkinError.error
       br
       .form-group
         label(for="recommender'sitters-name")  
         input.sitters-text-form(type='text' placeholder="RECOMMENDER'S NAME" 
-        name='RecommendersName' id='recommender')
+        name='recommendersName' id='recommender')
         span#recommendersnameError.error
       br
       .form-group
         label(for="recommender'sitters-name")  
-        input.sitters-text-form(type='text' placeholder="RECOMMENDER'S CONTACT" name='RecommendersContact' id='recommenderscontact')
+        input.sitters-text-form(type='text' placeholder="RECOMMENDER'S CONTACT" name='recommendersContact' id='recommenderscontact')
         span#recommenderscontactError.error
       br
       .form-group

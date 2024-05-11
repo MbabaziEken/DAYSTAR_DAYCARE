@@ -92,7 +92,7 @@ router.get("/parents", (req, res) => {
  });
 
  // administration routes
-  router.get("/Admin", ensurelogin, (req, res) => {
+  router.get("/Admin",  (req, res) => {
     res.render("Admin", { title: "Admin" });
   });
 

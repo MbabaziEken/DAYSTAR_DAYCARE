@@ -1,0 +1,58 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title babbies Dash
+  link(href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/css/babbieslist.css')
+.dashboard
+  #main
+    #navbar
+      ul 
+       il
+    h1 Daystar Sitters Dashboard
+table.table.table-striped.table-responsive
+                    thead.bg-secondary
+                        tr
+                            th BABY  NAME
+                            th GENDER 
+                            th AGE 
+                            th FAVORITES 
+                            th HEALTH STATUS
+                            th PARENTS CONTACT
+                            th PARENTS NAME  
+                            th NEXT OF KIN
+                            th BABY NUMBER 
+                            th ALLERGIES  
+                            th ASSIGNED SITTER 
+                            th  CHECKIN
+                            th CHECKOUT
+                            th TIME SPENT
+                            th BROUGHTBY
+                            th PICKEDBY
+                    tbody
+                        if users.length
+                        each user in users
+                            tr
+                                td #{user.babyName}
+                                td #{user.gender}
+                                td #{user.age}
+                                td #{user.favorites}
+                                td #{user.healthStatus}
+                                td #{user.parentsContact}
+                                td #{user.parentsName}
+                                td #{user.nextOfKin}
+                                td #{user.idNo}
+                                td #{user.allergies}
+                                td #{user.assignedSitter}
+                                td #{user.checkIn}
+                                td #{user.checkOut}
+                                td #{user.timeSpent}
+                                td #{user.broughtBy}
+                                td #{user.pickedBy}
+
+                                        button.btn.btn-dark.btn-block(type="submit") Delete
+                        else
+                            p No registrations yet :(
+
+script(src='/assets/bootstrap/js/bootstrap.bundle.js')

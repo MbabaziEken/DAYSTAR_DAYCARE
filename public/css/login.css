@@ -42,13 +42,12 @@ input[type="text"],input[type="password"]{
     border-radius:25px ;
 }
 
-a{
-    background-color: blueviolet;
-    color: rgb(24, 23, 23);
-    margin:500px 350px ;
-    padding: 15px 15px;
-    border-radius: 25px;
-    text-align: center;
-    font-size: large;
-    text-decoration: none;
+
+button[class="btn-primary"]{
+    background-color:blueviolet;
+    color: beige;
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    margin:20px 370px ;
 }

@@ -71,6 +71,6 @@ app.use("/", authRoutes);
 app.use("/", parentsroutes);
 app.use("/", dashbroutes);
 
-app.listen(4000, () => {
-  console.log("server is running on port 4000");
+app.listen(4100, () => {
+  console.log("server is running on port 4100");
 });

@@ -1,0 +1,51 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sitters Dash
+  link(href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/css/sitterslist.css')
+.dashboard
+  #main
+    #navbar
+    h1 Daystar Babbies  Dashboard
+table.table.table-striped.table-responsive
+                    thead.bg-secondary
+                        tr
+                            th SITTER NAME
+                            th GENDER 
+                            th AGE 
+                            th EDUCATION BACKGROUND 
+                            th LOCATION 
+                            th CONTACT
+                            th NIN
+                            th NEXT OF KIN
+                            th RECOMMENDERS NAME
+                            th RECOMMENDERS CONTACT 
+                            th SITTER NUMBER
+                            th AVAILABILITY 
+                            th
+                    tbody
+                        if users.length
+                        each user in users
+                            tr
+                                td #{user.sitterName}
+                                td #{user.gender}
+                                td #{user.age}
+                                td #{user.educationBackground}
+                                td #{user.location}
+                                td #{user.contact}
+                                td #{user.nin}
+                                td #{user.nextOfKin}
+                                td #{user.recommendersName}
+                                td #{user.recommendersContact}
+                                td #{user.sitterNumber}
+                                td #{user.availability}
+
+                                    form(method="post" action='/sittersDelete')
+                                        input(type="hidden", placeholder="", name="id", value=user._id)
+                                        button.btn.btn-dark.btn-block(type="submit") Delete
+                        else
+                            p No registrations yet :(
+
+script(src='/assets/bootstrap/js/bootstrap.bundle.js')

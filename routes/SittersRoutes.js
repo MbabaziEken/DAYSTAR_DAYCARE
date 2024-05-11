@@ -5,8 +5,21 @@ const router = express.Router();
 const Sitterregistration = require("../models/Sitter");
 
 //sitters routes
-router.get("/sitters", (req, res) => {
+router.get("/sitterRegistration", (req, res) => {
   res.render("sitters");
+});
+
+router.get("/sitters", async (req, res) => {
+  try {
+    let sitters = await Sitterregistration.find();
+    res.render("sitterslist", {
+      title: "Sitters Dashboard",
+      users: sitters,
+    });
+    // Allows you to define a block of code to be executed, if an error occurs in the try block
+  } catch (err) {
+    res.status(400).send("Unable to find sittter in the database");
+  }
 });
 
 router.post("/sitters", async (req, res) => {
@@ -15,12 +28,10 @@ router.post("/sitters", async (req, res) => {
     console.log(sitter);
     await sitter.save();
     res.redirect("/Admin");
-} 
-catch (error) {
-  res.status(400).send("sorry, something went wrong!");
-  console.log("Error registering sitter", error);
-}
-
+  } catch (error) {
+    res.status(400).send("sorry, something went wrong!");
+    console.log("Error registering sitter", error);
+  }
 });
 
 module.exports = router;

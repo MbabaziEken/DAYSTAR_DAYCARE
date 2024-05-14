@@ -1,0 +1,20 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title SitterUpdate
+  link(href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/css/sitterupdate.css')
+#main
+  h1 SITTER UPDATE
+  .container
+    .row
+      .col
+        form#Update(onsubmit='validationForm()' action='/sitterupdate' method='POST')
+            button.btn-primary(type='submit') Update
+            button.btn-primary(type='submit') Present
+            button.btn-primary(type='submit') Absent
+           
+                
+script(src='/js/sitterupdatevalidation.js')
+script(src='/assets/bootstrap/js/bootstrap.bundle.js')

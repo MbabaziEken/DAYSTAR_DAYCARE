@@ -8,7 +8,7 @@ const AdminModel = require("../models/Admin");
 const Sitterregistration = require("../models/Sitter");
 const Babyregistration = require("../models/Babbies");
 const Parentregistration = require("../models/Parents");
-
+const sitterpayment = require("../models/sitterpayment");
 
  // main routes
  router.get("/splash/", (req, res) => {
@@ -87,19 +87,51 @@ router.get("/parents", (req, res) => {
   });
 
    // stall routes
- router.get("/dollstall/", (req, res) => {
+ router.get("/dollstall/", ensurelogin.ensureLoggedIn(), (req, res) => {
    res.render("dollstall", { title: "dollstall" });
  });
 
  // administration routes
-  router.get("/Admin",  (req, res) => {
+  router.get("/Admin", ensurelogin.ensureLoggedIn(), (req, res) => {
     res.render("Admin", { title: "Admin" });
   });
 
   // payments route
- router.get("/payments/", (req, res) => {
+ router.get("/payments/", ensurelogin.ensureLoggedIn(), (req, res) => {
    res.render("payments", { title: "payments" });
 });
+
+router.get("/sitterpayment", ensurelogin.ensureLoggedIn(), (req, res) => {
+  res.render("sitterpayment");
+});
+
+router.get("/sitterpaymentlist", ensurelogin.ensureLoggedIn(), async (req, res) => {
+  try {
+    let sitter = await sitterpayment.find();
+    res.render("sitterpaymentlist", {
+      title: "SitterPayment",
+      users: sitter,
+    });
+    // Allows you to define a block of code to be executed, if an error occurs in the try block
+  } catch (err) {
+    res.status(400).send("Unable to find payments in the database");
+    console.log("No payments found");
+  }
+});
+
+router.post("/sitterpayment", ensurelogin.ensureLoggedIn(), async (req, res) => {
+  try {
+    const payment = new sitterpayment(req.body);
+    console.log(payment);
+    await payment.save();
+    res.redirect("/Admin");
+  } catch (error) {
+    res.status(400).send("sorry, no payments added!");
+    console.log("Error adding payments", error);
+  }
+});
+
+
 
 
 module.exports = router;

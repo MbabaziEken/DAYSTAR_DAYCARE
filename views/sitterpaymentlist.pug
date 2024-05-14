@@ -1,0 +1,28 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Payment Dash
+  link(href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/css/babbieslist.css')
+.dashboard
+  #main
+    #navbar
+      ul 
+       il
+    h1 Daystar Sitters Dashboard
+table.table.table-striped.table-responsive
+                    thead.bg-secondary
+                        tr
+                            th   NAME
+                            th AMOUNT
+                            th PAYMENT STATUS
+                    tbody
+                        if users.length
+                        each user in users
+                            tr
+                                td #{user.name}
+                                td #{user.amount}
+                                td #{user.paymentStatus}
+
+script(src='/assets/bootstrap/js/bootstrap.bundle.js')

@@ -1,0 +1,33 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title SitterPayment
+  link(href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/css/sitterpayment.css')
+.container
+  h3  Payments 
+  .row
+    form(onsubmit='validationForm()' action='/sitterpayment' method='POST')
+      .row
+        .input-field.col
+          label.form-label(for='fullName') FullName
+          input#FullName(type='text' name='name')
+          span#FullNameError.error
+        br
+        .row
+          .input-field.col
+            label.form-label(for='amount') Amount
+            input#amount(type='number' name='amount')
+            span#amountError.error
+        br
+        .row
+          .input-field.col
+            label.form-label(for='paymentstatus') Paymentstaus
+            input#amount(type='text' name='paymentstatus')
+            span#paymentstatusError.error
+          br
+          div
+            button.btn.btn-primary(type='submit') Submit
+script(src='/js/sitterpaymentvalidation.js')
+script(src='/assets/bootstrap/js/bootstrap.bundle.js')

@@ -3,6 +3,7 @@ const router = express.Router();
 
 // import model
 const Sitterregistration = require("../models/Sitter");
+const sitterpayment = require("../models/sitterpayment");
 
 //sitters routes
 router.get("/sitterRegistration", (req, res) => {
@@ -25,6 +26,12 @@ router.get("/sitters", async (req, res) => {
 router.post("/sitters", async (req, res) => {
   try {
     const sitter = new Sitterregistration(req.body);
+    await Sitterregistration.findOneAndUpdate(
+      {
+        name,
+      },
+      update,
+    );
     console.log(sitter);
     await sitter.save();
     res.redirect("/Admin");

@@ -31,6 +31,7 @@ const babyroutes = require("./routes/BabbiesRoutes");
 const sittersroutes = require("./routes/SittersRoutes");
 const parentsroutes = require("./routes/ParentRoutes");
 const dashbroutes = require("./routes/dashbRoutes");
+const sitterpayment = require("./routes/sitterpaymentRoutes");
 // rendering engine
 const app = express();
 

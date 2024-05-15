@@ -1,86 +1,83 @@
-
 function validationForm() {
     // Retrieve form input values
-    let Parentsname = document.getElementById('Parentsname').value;
-    let location = document.getElementById('location').value;
-    let Age = document.getElementById('age').value;
-    let gender = document.getElementById('gender').value;
+    let ParentsName = document.getElementById('ParentsName').value;
     let BabyName = document.getElementById('BabyName').value;
-    let NextOfKin = document.getElementById('NextOfKin').value;
+    let Location = document.getElementById('Location').value;
+    let Age = document.getElementById('Age').value;
+    let Gender = document.getElementById('Gender').value;
     let nin = document.getElementById('nin').value;
-    let NextOfKinsContact = document.getElementById('NextOfKinsContact').value;
     let Contact = document.getElementById('Contact').value;
-
+    let NextOfKin = document.getElementById('NextOfKin').value;
+    let NextOfKinsContact = document.getElementById('NextOfKinsContact').value;
     // Reset error messages
-    document.getElementById('ParentsnameError').textContent = '';
-    document.getElementById('locationError').textContent = '';
-    document.getElementById('ageError').textContent = '';
-    document.getElementById('genderError').textContent = '';
-    document.getElementById('NextOfKinError').textContent = '';
-    document.getElementById('ninError').textContent = '';
-    document.getElementById('NextOfKinsContactError').textContent = '';
+    document.getElementById('ParentsNameError').textContent = '';
     document.getElementById('BabyNameError').textContent = '';
+    document.getElementById('AgeError').textContent = '';
+    document.getElementById('GenderError').textContent = '';
+    document.getElementById('ninError').textContent = '';
+    document.getElementById('LocationError').textContent = '';
     document.getElementById('ContactError').textContent = '';
+    document.getElementById('NextOfKinError').textContent = '';
+    document.getElementById('NextOfKinsContactError').textContent = '';
 
 
-    var isValid = true;
+    let isValid = true;
 
-    // Validate name field
-    if (Parentsname.trim() === '') {
-        document.getElementById('ParentsnameError').textContent = 'Name is required';
+    // Validate ParentsName field
+    if (ParentsName.trim() === '') {
+        document.getElementById('ParentsNameError').textContent = 'ParentsName is required';
         isValid = false;
     }
     
-    // Validate  location field
-    if (location.trim() === '') {
-        document.getElementById('locationError').textContent = 'required';
+    // Validate  BabyName field
+    if (BabyName.trim() === '') {
+        document.getElementById('BabyNameError').textContent = 'BabyName is required';
         isValid = false;
     }
     
-    // Validate dob field
+    // Validate Age field
     if (Age.trim() === '') {
-        document.getElementById('ageError').textContent = 'required';
+        document.getElementById('AgeError').textContent = 'Age is required';
         isValid = false;
     }
     
-    // Validate gender field
-    if (gender.trim() === '') {
-        document.getElementById('genderError').textContent = 'required';
+    // Validate Gender field
+    if (Gender.trim() === '') {
+        document.getElementById('GenderError').textContent = 'Gender is required';
         isValid = false;
     }
     
-    // Validate nextOfKin field
-    if (nextOfKin.trim() === '') {
-        document.getElementById('nextOfKinError').textContent = 'required';
-        isValid = false;
-    }
     
     // Validate nin field
     if (nin.trim() === '') {
-        document.getElementById('ninError').textContent = 'required';
+        document.getElementById('ninError').textContent = 'nin field is required';
         isValid = false;
     }
-        
+    
+    // Validate recommender field
+    if (Location.trim() === '') {
+        document.getElementById('LocationError').textContent = 'Location field is required';
+        isValid = false;
+    }
+    
     // Validate education field
-    if (NextOfKinsContact.trim() === '') {
-        document.getElementById('NextOfKinsContactError').textContent = 'required';
+    if (Contact.trim() === '') {
+        document.getElementById('ContactError').textContent = 'Contact field is required';
         isValid = false;
     }
     
     // Validate sitterNumber field
-    if (BabyName.trim() === '') {
-        document.getElementById('BabyNameError').textContent = 'required';
+    if (NextOfKin.trim() === '') {
+        document.getElementById('NextOfKinError').textContent = 'NextOfKin is required';
         isValid = false;
     }
     
-    // Validate Contact field
-    if (Contact.trim() === '') {
-        document.getElementById('ContactError').textContent = 'required';
+    // Validate NextOfKinsContact field
+    if (NextOfKinsContact.trim() === '') {
+        document.getElementById('NextOfKinsContactError').textContent = 'NextOfKinsContact field is required';
         isValid = false;
     }
 
-
-
     return isValid;
-}
+};
 

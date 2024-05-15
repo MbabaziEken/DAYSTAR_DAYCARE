@@ -10,28 +10,17 @@ body, html {
     width: 100%;
 } 
 
-#sidebar {
-    grid-area: sidebar;
-    height: 100%;
-    overflow: auto;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    background-color: #cccc;
-    text-align: center;
-    padding-top: 50px;
-    
-}
 
-
-
-.btn-primary{
+a{
     background-color: rgb(224, 223, 223);
     color: grey;
-     margin: 25px 25px;
+     margin-top: 15px;
      padding: 15px 15px;
-    border-radius: 5px;
+    border-radius: 25px;
     text-align: center;
-    font-size: large;
+    font-size: medium;
+    text-decoration: none;
+  
 }
 
 #logoutBtn{
@@ -43,10 +32,6 @@ body, html {
     text-align: center;
     font-size: large;
     text-decoration: none;
-}
-
-.logoutBtn{
-    margin-top: 35px;
 }
 
 h1{
@@ -69,10 +54,6 @@ h1{
  flex: 1;
 }
 
-a{
-    text-align: center;
-}
-
 #left img{
     padding-top: 50px;
      border-radius: 50px;
@@ -87,13 +68,8 @@ a{
 }
 
 #right img{
-padding-top: 50px;
-/* padding-bottom: 10px; */
-border-radius: 50px;
-/* width: 550px;
-height: 550px;
-box-sizing: border-box;
-flex: 1; */
+padding-top: 35px;
+border-radius: 35px;
 }
 
 
@@ -110,6 +86,3 @@ flex: 1; */
      
 }
 
-a{
-    text-decoration: none;
-}

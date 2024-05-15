@@ -34,6 +34,7 @@ const sittersSchema = new Schema({
   nin: {
     type: String,
     trim: true,
+    unique:true,
   },
 
   nextOfKin: {

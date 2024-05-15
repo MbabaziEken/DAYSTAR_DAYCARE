@@ -37,7 +37,7 @@ const parentsSchema = new Schema({
         type:String,
         trim:true,
     },
-        NextOfKinsContact:{
+    NextOfKinsContact:{
         type:String,
         trim:true,
     }

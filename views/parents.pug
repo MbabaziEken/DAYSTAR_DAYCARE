@@ -9,39 +9,39 @@ head
   #container
     #rol
     h5 PARENTS FORM
-    form.entry-form(onsubmit='validationForm()' action='/parents' method='POST')
+    form.entry-form(onsubmit='return validationForm()' action='/parents' method='POST')
       .input
         label(for='parents')  
-        input.parents-text-form(type='text' placeholder='enteryourname' name='Parentsname' id='Parentsname')
-        span#ParentsnameError.error
+        input.parents-text-form(type='text' placeholder='Enter your name' name='ParentsName' id='ParentsName')
+        span#ParentsNameError.error
       br
       .form-group
-        label(for='parents')  
-        input.parents-text-form(type='text' placeholder="enteryourbabbiesname" name='BabyName' id='BabyName')
+        label(for='BabyName')  
+        input.BabyName-text-form(type='text' placeholder="Enter your babbiesname" name='BabyName' id='BabyName')
         span#BabyNameError.error
       br
       .form-group
-        label(for='sitters-age')
-        input.parents-text-form(type='number' placeholder='enteryourage' name='Age' id='age')
-        span#ageError.error
+        label(for='parents-age')
+        input.parents-text-form(type='number' placeholder='Enter your age' name='Age' id='Age')
+        span#AgeError.error
       br
       .form-group
         label(for='gender ')  
-        select#gender(name='Gender')
+        select#Gender(name='Gender')
           option(value='') GENDER
           option(value='male') male
           option(value='female') female
           option(value='other') other
-          span#genderError.error
+          span#GenderError.error
       br
       .form-group
       label(for='NIN.no.')  
-      input.parents-text-form(type='text' placeholder='enteryourNIN' name='nin' id='nin')
+      input.parents-text-form(type='text' placeholder='Enter your NIN' name='nin' id='nin')
       span#ninError.error
       br
       .form-group
         label(for='location')  
-        input.parents-text-form(type='text' placeholder='place of residence' name='Location' id='Location')
+        input.parents-text-form(type='text' placeholder='Location' name='Location' id='Location')
         span#LocationError.error
       br
       .form-group

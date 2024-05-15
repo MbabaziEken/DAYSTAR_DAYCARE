@@ -24,7 +24,7 @@ table.table.table-striped.table-responsive
                             th RECOMMENDERS CONTACT 
                             th SITTER NUMBER
                             th AVAILABILITY 
-                            th
+                            th UPDATE
                     tbody
                         if users.length
                         each user in users
@@ -41,11 +41,7 @@ table.table.table-striped.table-responsive
                                 td #{user.recommendersContact}
                                 td #{user.sitterNumber}
                                 td #{user.availability}
-
-                                    form(method="post" action='/sittersDelete')
-                                        input(type="hidden", placeholder="", name="id", value=user._id)
-                                        button.btn.btn-dark.btn-block(type="submit") Delete
-                        else
-                            p No registrations yet :(
-
+                                td 
+                                    button.btn.btn-primary.update-btn Update
+script(src='/js/sitterupdate.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

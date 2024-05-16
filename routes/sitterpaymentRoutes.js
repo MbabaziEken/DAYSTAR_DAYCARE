@@ -11,12 +11,20 @@ router.get("/sitterpayment", (req, res) => {
   
   router.get("/sitterpaymentlist", async (req, res) => {
     try {
-      let sitter = await sitterpayment.find();
-      res.render("sitterpaymentlist", {
-        title: "SitterPayment",
-        users: sitter,
-      });
-      // Allows you to define a block of code to be executed, if an error occurs in the try block
+      if(req.params.sitterName != null){
+        let sitter = await sitterpayment.find();
+        res.render("sitterpaymentlist/:sitterName?", {
+          title: "SitterPayment",
+          users: sitter,
+        });
+  
+      }else{
+        let sitter = await sitterpayment.find();
+        res.render("sitterpaymentlist", {
+          title: "paymentsupdate",
+          sitter,
+        });  
+      }
     } catch (err) {
       res.status(400).send("Unable to find payments in the database");
       console.log("No payments found");

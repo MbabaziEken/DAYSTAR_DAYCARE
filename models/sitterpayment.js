@@ -11,8 +11,8 @@ const sitterPaymentSchema = new Schema({
     required: true,
   },
   paymentStatus: {
-    type: Boolean,
-    default: false,
+    type: String,
+    trim:true,
   },
 });
 

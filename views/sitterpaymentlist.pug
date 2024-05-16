@@ -10,13 +10,14 @@ head
     #navbar
       ul 
        il
-    h1 Daystar Sitters Dashboard
+    h1  Sitters Payments Dashboard
 table.table.table-striped.table-responsive
                     thead.bg-secondary
                         tr
                             th   NAME
                             th AMOUNT
                             th PAYMENT STATUS
+                            th EDIT
                     tbody
                         if users.length
                         each user in users
@@ -24,5 +25,7 @@ table.table.table-striped.table-responsive
                                 td #{user.name}
                                 td #{user.amount}
                                 td #{user.paymentStatus}
+                                td 
+                                  Button.btn.btn-primary(type='submit') Edit
 
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

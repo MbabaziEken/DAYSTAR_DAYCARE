@@ -30,6 +30,7 @@ table.table.table-striped.table-responsive
                             th TIME SPENT
                             th BROUGHTBY
                             th PICKEDBY
+                            th EDIT
                     tbody
                         if users.length
                         each user in users
@@ -50,9 +51,7 @@ table.table.table-striped.table-responsive
                                 td #{user.timeSpent}
                                 td #{user.broughtBy}
                                 td #{user.pickedBy}
+                                td
 
-                                        button.btn.btn-dark.btn-block(type="submit") Delete
-                        else
-                            p No registrations yet :(
-
+                                        button.btn.btn-primary.Edit-btn(type="submit") Edit
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

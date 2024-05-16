@@ -10,13 +10,23 @@ router.get("/sitterRegistration", (req, res) => {
   res.render("sitters");
 });
 
-router.get("/sitters", async (req, res) => {
+router.get("/sitters/:sitterName?", async (req, res) => {
   try {
-    let sitters = await Sitterregistration.find();
-    res.render("sitterslist", {
-      title: "Sitters Dashboard",
-      users: sitters,
-    });
+    if(req.params.sitterName != null){
+      let sitter = await Sitterregistration.findOne({sitterName:req.params.sitterName});
+      res.render("sitterupdate", {
+        title: "Sitters Dashboard",
+        sitter,
+      });
+  
+    }else{
+      let sitters = await Sitterregistration.find();
+      res.render("sitterslist", {
+        title: "Sitters Dashboard",
+        users: sitters,
+      });
+  
+    }
     // Allows you to define a block of code to be executed, if an error occurs in the try block
   } catch (err) {
     res.status(400).send("Unable to find sittter in the database");

@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Sitters
-  link(href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.css')
   link(rel='stylesheet' href='/css/sitters.css')
 #main
   #container
@@ -94,7 +94,7 @@ head
       .form-group
         label(for="recommender'sitters-name")  
         input.sitters-text-form(type='text' placeholder="RECOMMENDER'S NAME" 
-        name='recommendersName' id='recommender' value=sitter.recommender)
+        name='recommendersName' id='recommender' value=sitter.recommendersName)
         span#recommendersnameError.error
       br
       .form-group

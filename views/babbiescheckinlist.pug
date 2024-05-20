@@ -1,0 +1,36 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Babbiescheckin  Dash
+  link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/css/babbiescheckindash.css')
+.dashboard
+  #main
+    #navbar
+    h1 Daystar Babbiescheckin  Dashboard
+table.table.table-striped.table-responsive
+                    thead.bg-secondary
+                        tr
+                            th BABY NAME 
+                            th PARENT'S NAME
+                            th AGE 
+                            th BABY NUMBER 
+                            th TIME SPENT
+                            th BROUGHTBY
+                            th CHECKIN 
+                            th DELETE
+                    tbody
+                        if users.length
+                        each user in users
+                            tr
+                                td #{user.babyName}
+                                td #{user.parentsName}
+                                td #{user.idNo}
+                                td #{user.timeSpent}
+                                td #{user.broughtBy}
+                                td 
+                                    button.btn.btn-primary.checkin-btn Checkin 
+                                   
+script(src='/js/babbies.js')
+script(src='/assets/bootstrap/js/bootstrap.bundle.js')

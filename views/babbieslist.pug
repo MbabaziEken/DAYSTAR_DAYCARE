@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title babbies Dash
-  link(href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.css')
   link(rel='stylesheet' href='/css/babbieslist.css')
 .dashboard
   #main
@@ -53,5 +53,6 @@ table.table.table-striped.table-responsive
                                 td #{user.pickedBy}
                                 td
 
-                                        button.btn.btn-primary.Edit-btn(type="submit") Edit
+                                        button.btn.btn-primary.edit-btn(type="submit") Edit
+script(src='/js/babbiesclockin.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

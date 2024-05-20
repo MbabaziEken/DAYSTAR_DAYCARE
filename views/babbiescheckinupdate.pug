@@ -10,26 +10,26 @@ head
   #container
     #rol
     h5 BABBIES CHECKIN FORM
-    form#submit.entry-form(action='/babbies' method='POST')
+    form#submit.entry-form(action='/babbiescheckin' method='POST')
       .input
         label(for='babbies-name')  
-        input.babbies-text-form(type='text' placeholder='BABYNAME' name='babyName' id='Babyname')
+        input.babbies-text-form(type='text' placeholder='BABYNAME' name='babyName' id='Babyname' value='babyName')
       br
       .form-group
         label(for="parent's-name")  
-        input.babbies-text-form(type='text' placeholder="PARENT'S NAME" name='parentsName' id='ParentsName')
+        input.babbies-text-form(type='text' placeholder="PARENT'S NAME" name='parentsName' id='ParentsName' value='parentsName')
       br
       .form-group
         label(for='babby-number')  
-        input.babbies-text-form(type='text' placeholder='BABBY NUMBER' name='idNo' id='IdNo')
+        input.babbies-text-form(type='text' placeholder='BABBY NUMBER' name='idNo' id='IdNo' value='idNo')
       br
       .form-group
         label(for='time')  
-        input.babbies-text-form(type='text' placeholder='TIME' name='time' id='time')
+        input.babbies-text-form(type='text' placeholder='TIME ' name='time' id='time' value='time')
       br
       .form-group
         label(for='broughtby')  
-        input.babbies-text-form(type='text' placeholder='BROUGHTBY' name='broughtBy' id='broughtby')
+        input.babbies-text-form(type='text' placeholder='BROUGHTBY' name='broughtBy' id='broughtby' value='broughtBy')
       br
       button.btn-primary(type='submit') checkin
 script(src='/js/babbies.js')

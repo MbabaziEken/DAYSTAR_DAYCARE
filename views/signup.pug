@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Sign Up
-  link(href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.css')
   link(rel='stylesheet' href='/css/signup.css')
 h2 WELCOME TO DAYSTARDAYCARE
 p
@@ -13,57 +13,60 @@ img(src='/assets/images/EKEN DAYSTAR.png' alt='Logo' width='150' height='150')
 .container
   h3 Sign Up
   .row
-    form(onsubmit='validationForm()' action='/Adminregister' method='POST')
+    form#signup( action='/Adminregister' method='POST')
       .row
         .input-field.col
           label.form-label(for='fullName') Name
-          input#FullName(type='text' name='fullName')
+          input.form-control#FullName(type='text' name='fullName')
           span#FullNameError.error
         br
-        label(for='gender ') 
-        select#gender(name='gender')
-          option(value='') GENDER
-          option(value='male') male
-          option(value='female') female
-        span#genderError.error
-      br
+      .row
+        .input-field.col
+          label(for='gender ') 
+          select#gender(name='gender')
+            option(value='' selected) GENDER
+            option(value='male') male
+            option(value='female') female
+          span#genderError.error
+        br
       .row
         .input-field.col
           label.form-label(for='EducationBackGround') Education Background
-          input#EBG(type='text' name='EBG')
+          input.form-control#EBG(type='text' name='EBG')
           span#EBGError.error
         br
-        .row
-          .input-field.col
-            label.form-label(for='placeofresidence') Place of Residence
-            input#location(type='text' name='PlaceofResidence')
-            span#RoPError.error
-          br
-          .row
-            .input-field.col
-              label.form-label(for='workingexprience') Working Exprience
-              input#WE(type='text' name='WorkingExprience')
-              span#WEError.error
-            br
-            .row
-              .input-field.col
-                label.form-label(for='email') Email
-                input#email(type='text' name='email')
-                span#EmailError.error
-              br
-              .row
-                .input-field.col
-                  label.form-label(for='password') Password
-                  input#Password(type='Password' name='Password')
-                  span#PasswordError.error
-                br
-                .row
-                  .input-field.col
-                    label.form-label(for='password') Confirm Password
-                    input(type='Password' name='ConfirmPassword' id='ConfirmPassword')
-                    span#ConfirmPasswordError.error
-                  br
-                  div
-                    button.btn.btn-primary(type='submit') SignUp
+      .row
+        .input-field.col
+          label.form-label(for='placeofresidence') Place of Residence
+          input.form-control#location(type='text' name='PlaceofResidence')
+          span#RoPError.error
+        br
+      .row
+        .input-field.col
+          label.form-label(for='workingexprience') Working Exprience
+          input.form-control#WE(type='text' name='WorkingExprience')
+          span#WEError.error
+        br
+      .row
+        .input-field.col
+          label.form-label(for='email') Email
+          input.form-control#email(type='text' name='email')
+          span#EmailError.error
+        br
+      .row
+        .input-field.col
+          label.form-label(for='password') Password
+          input.form-control#Password(type='Password' name='Password')
+          span#PasswordError.error
+        br
+      .row
+        .input-field.col
+          label.form-label(for='password') Confirm Password
+          input.form-control(type='Password' name='ConfirmPassword' id='ConfirmPassword')
+          span#ConfirmPasswordError.error
+        br
+      .row
+        .input-field.col
+          button.btn.btn-primary.mt-2(type='submit' style="width:70px; backgroundcolor:rgb(129, 7, 93)") SignUp
 script(src='/js/signupvalidation.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

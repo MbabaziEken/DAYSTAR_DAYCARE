@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Payment Dash
-  link(href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.css')
   link(rel='stylesheet' href='/css/babbieslist.css')
 .dashboard
   #main
@@ -22,10 +22,11 @@ table.table.table-striped.table-responsive
                         if users.length
                         each user in users
                             tr
-                                td #{user.name}
+                                td #{user.fullName}
                                 td #{user.amount}
                                 td #{user.paymentStatus}
                                 td 
-                                  Button.btn.btn-primary(type='submit') Edit
+                                  a.btn.btn-primary( href=`/sitterpaymentlist/${user._id}`) Edit
 
+script(src='/js/paymentsupdate.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

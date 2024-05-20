@@ -25,13 +25,15 @@ const admin = require("../DAYSTAR_DAYCARE/models/Admin");
 const parents = require("../DAYSTAR_DAYCARE/models/Parents");
 
 // importing routes
+const dashbroutes = require("./routes/dashbRoutes");
 const adminregisterationRoutes = require("./routes/AdminRegRoutes");
 const authRoutes = require("./routes/AuthRoutes")
 const babyroutes = require("./routes/BabbiesRoutes");
 const sittersroutes = require("./routes/SittersRoutes");
 const parentsroutes = require("./routes/ParentRoutes");
-const dashbroutes = require("./routes/dashbRoutes");
 const sitterpayment = require("./routes/sitterpaymentRoutes");
+const babbiescheckin = require("./routes/BabbiescheckinRoutes");
+// const babbiescheckinlist = require("./routes/Babbiescheckinlist")
 // rendering engine
 const app = express();
 
@@ -71,6 +73,8 @@ app.use("/", sittersroutes);
 app.use("/", authRoutes);
 app.use("/", parentsroutes);
 app.use("/", dashbroutes);
+// app.use("/", babbiescheckin)
+// app.use("/", babbiescheckinlist)
 
 app.listen(4100, () => {
   console.log("server is running on port 4100");

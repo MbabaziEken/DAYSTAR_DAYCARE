@@ -12,20 +12,20 @@ router.get("/sitterRegistration", (req, res) => {
 
 router.get("/sitters/:sitterName?", async (req, res) => {
   try {
-    if(req.params.sitterName != null){
-      let sitter = await Sitterregistration.findOne({sitterName:req.params.sitterName});
+    if (req.params.sitterName != null) {
+      let sitter = await Sitterregistration.findOne({
+        sitterName: req.params.sitterName,
+      });
       res.render("sitterupdate", {
         title: "Sitters Dashboard",
         sitter,
       });
-  
-    }else{
+    } else {
       let sitters = await Sitterregistration.find();
       res.render("sitterslist", {
         title: "Sitters Dashboard",
         users: sitters,
       });
-  
     }
     // Allows you to define a block of code to be executed, if an error occurs in the try block
   } catch (err) {
@@ -35,18 +35,42 @@ router.get("/sitters/:sitterName?", async (req, res) => {
 
 router.post("/sitters", async (req, res) => {
   try {
-    const sitter = new Sitterregistration(req.body);
+    // console.log(req.body);
+    const {
+      sitterName,
+      age,
+      gender,
+      religion,
+      educationBackground,
+      location,
+      contact,
+      nin,
+      nextOfKin,
+      recommendersName,
+      recommendersContact,
+      sitterNumber,
+      availability,
+    } = req.body;
     await Sitterregistration.findOneAndUpdate(
+      { sitterName},
       {
-        name,
-      },
-      update,
+        age,
+        gender,
+        religion,
+        educationBackground,
+        location,
+        contact,
+        nin,
+        nextOfKin,
+        recommendersName,
+        recommendersContact,
+        sitterNumber,
+        availability,
+      }
     );
-    console.log(sitter);
-    await sitter.save();
-    res.redirect("/Admin");
+    res.redirect("/sitters");
   } catch (error) {
-    res.status(400).send("sorry, something went wrong!");
+    res.status(400).send("sorry, something went wrong!", error);
     console.log("Error registering sitter", error);
   }
 });

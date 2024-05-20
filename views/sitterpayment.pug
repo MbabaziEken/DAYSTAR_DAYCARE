@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title SitterPayment
-  link(href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.css')
   link(rel='stylesheet' href='/css/sitterpayment.css')
 .container
   h3  Payments 
@@ -12,19 +12,19 @@ head
       .row
         .input-field.col
           label.form-label(for='fullName') FullName
-          input#FullName(type='text' name='name')
+          input#FullName(type='text' name='fullName' value=sitter.fullName)
           span#FullNameError.error
         br
         .row
           .input-field.col
             label.form-label(for='amount') Amount
-            input#amount(type='number' name='amount')
+            input#amount(type='number' name='amount' value=sitter.amount)
             span#amountError.error
         br
         .row
           .input-field.col
             label.form-label(for='paymentstatus') Paymentstaus
-            input#amount(type='text' name='paymentStatus')
+            input#amount(type='text' name='paymentStatus' value=sitter.paymentStatus)
             span#paymentstatusError.error
           br
           div

@@ -12,8 +12,8 @@ router.get("/Babyregistration", (req, res) => {
 router.get("/babbies/:babyName?", async (req, res) => {
   try {
     if(req.params.babyName != null){
-      let babbies = await Babyregistration.findone({babyName:req.params.babyName});
-      res.render("babbiesupdate", {
+      let baby = await Babyregistration.findOne({babyName:req.params.babyName});
+      res.render("babyupdate", {
         title: "Babbies Dashboard",
         baby,
     }); 
@@ -32,7 +32,7 @@ router.get("/babbies/:babyName?", async (req, res) => {
       users: babbies,
 }); 
 }catch (error) {
-  res.status().send("sorry, something went wrong!");
+  res.json({error:error});
   console.log("Error registering baby", error);
 }
 

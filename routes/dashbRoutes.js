@@ -105,19 +105,34 @@ router.get("/sitterpayment", ensurelogin.ensureLoggedIn(), (req, res) => {
   res.render("sitterpayment");
 });
 
-router.get("/sitterpaymentlist", ensurelogin.ensureLoggedIn(), async (req, res) => {
+router.get("/sitterpaymentlist/:sitterID?", 
+// ensurelogin.ensureLoggedIn(), 
+async (req, res) => {
   try {
-    let sitter = await sitterpayment.find();
-    res.render("sitterpaymentlist", {
-      title: "SitterPayment",
-      users: sitter,
-    });
-    // Allows you to define a block of code to be executed, if an error occurs in the try block
+    console.log(req.params)
+    if(req.params.sitterID != null){
+      let sitter = await sitterpayment.findOne({_id:req.params.sitterID});
+      console.log(sitter)
+      res.render("sitterpayment", {
+        title: "SitterPayment",
+         sitter,
+      });
+
+    }else{
+      let sitter = await sitterpayment.find();
+      res.render("sitterpaymentlist", {
+        title: "paymentsupdate",
+        users: sitter,
+
+      });  
+    }
   } catch (err) {
     res.status(400).send("Unable to find payments in the database");
     console.log("No payments found");
   }
 });
+
+
 
 router.post("/sitterpayment", ensurelogin.ensureLoggedIn(), async (req, res) => {
   try {

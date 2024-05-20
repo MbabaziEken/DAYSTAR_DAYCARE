@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const sitterPaymentSchema = new Schema({
-  name: {
+  fullName: {
     type: String,
     trim: true,
   },

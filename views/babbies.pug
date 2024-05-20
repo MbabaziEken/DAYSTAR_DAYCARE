@@ -3,9 +3,8 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Babbies
-  link(href='/assets/boostrap/css/boostrap.css')
+  link(rel='stylesheet' href='/assets/boostrap/css/boostrap.css')
   link(rel='stylesheet' href='/css/babbies.css')
-
 #main
   #container
     #rol
@@ -69,6 +68,10 @@ head
       .form-group
         label(for='timespent')  
         input.babbies-text-form(type='text' placeholder='TIME SPENT' name='timeSpent' id='timespent')
+      br
+        .form-group
+        label(for='time')  
+        input.babbies-text-form(type='text' placeholder='TIME' name='time' id='time')
       br
       .form-group
         label(for='broughtby')  

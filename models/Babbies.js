@@ -54,6 +54,10 @@ const babbiesSchema = new Schema({
         type:String,
         trim:true, 
     },
+    time:{
+        type:String,
+        trim:true, 
+    },
     timeSpent:{
         type:String,
         trim:true, 

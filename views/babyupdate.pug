@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Babbies
-  link(href='/assets/boostrap/css/boostrap.css')
+  link(rel='stylesheet' href='/assets/boostrap/css/boostrap.css')
   link(rel='stylesheet' href='/css/babbies.css')
 
 #main
@@ -13,79 +13,79 @@ head
     form#submit.entry-form(action='/babbies' method='POST')
       .input
         label(for='babbies-name')  
-        input.babbies-text-form(type='text' placeholder='BABYNAME' name='babyName' id='Babyname' value='babyName')
+        input.babbies-text-form(type='text' placeholder='BABYNAME' name='babyName' id='Babyname' value=baby.babyName)
       br
       .form-group
         label(for='babbies-age')
-        input.babbies-text-form(type='number' placeholder='AGE' name='age' id='Age' value='age')
+        input.babbies-text-form(type='number' placeholder='AGE' name='age' id='Age' value=baby.age)
       br
       .form-group
         label(for='gender ')  
         select#gender(name='gender')
-        if gender == ''
-          option(value='' selected) GENDER 
-        else 
-          option(value='') GENDER
-        if gender == 'male'
-          option(value='male' selected) male
-        else 
-          option(value='male') male
-        if gender == 'female'
-          option(value='female' selected) female
-        else 
-          option(value='female') female
+          if baby.gender == ''
+            option(value='' selected) GENDER 
+          else 
+            option(value='') GENDER
+          if gender == 'male'
+            option(value='male' selected) male
+          else 
+            option(value='male') male
+          if gender == 'female'
+            option(value='female' selected) female
+          else 
+            option(value='female') female
       br
       .form-group
         label(for='favorites')  
-        input.babbies-text-form(type='text' placeholder='FAVORITES' name='favorites' id='Favorites' value='favorites')
+        input.babbies-text-form(type='text' placeholder='FAVORITES' name='favorites' id='Favorites' value=baby.favorites)
       br
       .form-group
         label(for='health-status')  
-        input.babbies-text-form(type='text' placeholder='HEALTH STATUS' name='healthStatus' id='HealthStatus' value='healthStatus')
+        input.babbies-text-form(type='text' placeholder='HEALTH STATUS' name='healthStatus' id='HealthStatus' value=baby.healthStatus)
       br
       .form-group
         label(for="parent's-contact")  
-        input.babbies-text-form(type='text' placeholder="PARENT'S CONTACT" name='parentsContact' id='ParentsContact' value='parentsContact')
+        input.babbies-text-form(type='text' placeholder="PARENT'S CONTACT" name='parentsContact' id='ParentsContact' value=baby.parentsContact)
       br
       .form-group
         label(for="parent's-name")  
-        input.babbies-text-form(type='text' placeholder="PARENT'S NAME" name='parentsName' id='ParentsName' value='parentsName')
+        input.babbies-text-form(type='text' placeholder="PARENT'S NAME" name='parentsName' id='ParentsName' value=baby.parentsName)
       br
       .form-group
         label(for='next-of-kin')  
-        input.babbies-text-form(type='text' placeholder='NEXT OF KIN' name='nextOfKin' id='NextOfKin' value='nextOfKin')
+        input.babbies-text-form(type='text' placeholder='NEXT OF KIN' name='nextOfKin' id='NextOfKin' value=baby.nextOfKin)
       br
       .form-group
         label(for='babby-number')  
-        input.babbies-text-form(type='text' placeholder='BABBY NUMBER' name='idNo' id='IdNo' value='idNo')
+        input.babbies-text-form(type='text' placeholder='BABBY NUMBER' name='idNo' id='IdNo' value=baby.idNo)
       br
       .form-group
         label(for='allergies')  
-        input.babbies-text-form(type='text' placeholder='ALLERGIES' name='allergies' id='Allergies' value='allergies')
+        input.babbies-text-form(type='text' placeholder='ALLERGIES' name='allergies' id='Allergies' value=baby.allergies)
       br
       .form-group
         label(for='assigned')  
-        input.babbies-text-form(type='text' placeholder='ASSIGNED SITTER' name ='allergies' id='assignedSitter' value='allergies')
+        input.babbies-text-form(type='text' placeholder='ASSIGNED SITTER' name ='allergies' id='assignedSitter' value=baby.allergies)
       br
       .form-group
         label(for='checkin')  
-        input.babbies-text-form(type='text' placeholder='CHECKIN' name='checkIn' id='checkin' value='checkIn')
+        input.babbies-text-form(type='text' placeholder='CHECKIN' name='checkIn' id='checkin' value=baby.checkIn)
       br
       .form-group
         label(for='checkout')  
-        input.babbies-text-form(type='text' placeholder='CHECKOUT' name='checkOut' id='checkout' value='checkOut')
+        input.babbies-text-form(type='text' placeholder='CHECKOUT' name='checkOut' id='checkout' value=baby.checkOut)
       br
       .form-group
         label(for='timespent')  
-        input.babbies-text-form(type='text' placeholder='TIME SPENT' name='timeSpent' id='timespent' value='timeSpent')
+        input.babbies-text-form(type='text' placeholder='TIME SPENT' name='timeSpent' id='timespent' value=baby.timeSpent)
       br
       .form-group
         label(for='broughtby')  
-        input.babbies-text-form(type='text' placeholder='BROUGHTBY' name='broughtBy' id='broughtby' value='broughtBy')
+        input.babbies-text-form(type='text' placeholder='BROUGHTBY' name='broughtBy' id='broughtby' value=baby.broughtBy)
       br
       .form-group
         label(for='pickedby')  
-        input.babbies-text-form(type='text' placeholder='PICKEDBY' name='pickedBy' id='pickedby' value='pickedBy')
+        input.babbies-text-form(type='text' placeholder='PICKEDBY' name='pickedBy' id='pickedby' value=baby.pickedBy)
 
       br
       button.btn-primary(type='submit') Edit

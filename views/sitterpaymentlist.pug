@@ -17,7 +17,7 @@ table.table.table-striped.table-responsive
                             th   NAME
                             th AMOUNT
                             th PAYMENT STATUS
-                            th EDIT
+                            th UPDATE
                     tbody
                         if users.length
                         each user in users
@@ -26,7 +26,7 @@ table.table.table-striped.table-responsive
                                 td #{user.amount}
                                 td #{user.paymentStatus}
                                 td 
-                                  a.btn.btn-primary( href=`/sitterpaymentlist/${user._id}`) Edit
+                                  a.btn.btn-primary( href=`/sitterpaymentlist/`+ user._id) Update
 
 script(src='/js/paymentsupdate.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

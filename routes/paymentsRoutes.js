@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-
+const ensurelogin = reqire("connect-ensure-login")
 // import model
 const Sitterregistration = require("../models/Sitter");
 const sitterpayment = require("../models/sitterpayment");
 
 //sitters routes
-router.get("/sitterRegistration", (req, res) => {
+router.get("/sitterRegistration", ensurelogin.ensureLoggedIn(), (req, res) => {
   res.render("sitters");
 });
 

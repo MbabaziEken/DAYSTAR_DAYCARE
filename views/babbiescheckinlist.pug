@@ -14,7 +14,6 @@ table.table.table-striped.table-responsive
                         tr
                             th BABY NAME 
                             th PARENT'S NAME
-                            th AGE 
                             th BABY NUMBER 
                             th TIME SPENT
                             th BROUGHTBY
@@ -30,7 +29,11 @@ table.table.table-striped.table-responsive
                                 td #{user.timeSpent}
                                 td #{user.broughtBy}
                                 td 
-                                    button.btn.btn-primary.checkin-btn Checkin 
+                                    a.btn.btn-primary( href=`/babbiescheckin/`+ user._id) Checkin 
+                                td
+                                  form(method="POST" action="/deletebaby")
+                                    input(type="hidden" name="id" value= user._id)
+                                    button.btn.btn-block.btn-danger(type="submit") Delete
                                    
-script(src='/js/babbies.js')
+script(src='/js/checkinupdate.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

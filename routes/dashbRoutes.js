@@ -36,7 +36,7 @@ router.get("/sitters", (req, res) => {
   res.render("sitters");
 });
 
-router.post("/sitters", async (req, res) => {
+router.post("/sitters", ensurelogin.ensureLoggedIn(), async (req, res) => {
     try {
       const sitter = new Sitterregistration(req.body);
       console.log(sitter);
@@ -50,41 +50,48 @@ router.post("/sitters", async (req, res) => {
 });  
 
 // baby routes
-router.get("/babbies", (req, res) => {
-    res.render("babbies");
-  });
+router.get("/babyregister", ensurelogin.ensureLoggedIn(), (req, res) => {
+  res.render("babbies");
+});
 
-  router.post("/babbies", async (req, res) => {
-    try {
-      const baby = new Babyregistration(req.body);
-      console.log(baby);
-      await baby.save();
-      res.redirect("/babbies");
-  } 
-  catch (error) {
-    res.status(400).send("sorry, something went wrong!");
-    console.log("Error registering baby", error);
+
+
+// GET route to render update form
+router.get('/babbiescheckin/edit/:id', async (req, res) => {
+  try {
+    const babyId = req.params.id;
+    const baby = await Babyregistration.findById(babyId);
+    res.render('babbiescheckinedit', {
+      title: 'Update Baby Record',
+      baby
+    });
+  } catch (error) {
+    res.status(500).send('Error retrieving baby record for update');
   }
-  
-  });
+});
 
-//parent routes
-router.get("/parents", (req, res) => {
-    res.render("parents");
-  });
-
-  router.post("/parents", async (req, res) => {
-    try {
-      const parent = new Parentregistration(req.body);
-      console.log(parent);
-      await parent.save();
-      res.redirect("/Admin");
-  } 
-  catch (error) {
-    res.status(400).send("sorry, something went wrong!");
-    console.log("Error registering sitter", error);
+// POST route to handle update submission
+router.post('/babbiescheckin/edit/:id', async (req, res) => {
+  try {
+    const babyId = req.params.id;
+    await Babyregistration.findByIdAndUpdate(babyId, req.body);
+    res.redirect('/babbiescheckinlist');
+  } catch (error) {
+    res.status(500).send('Error updating baby record');
   }
-  });
+});
+
+// delete route
+router.delete('/babbiescheckin/:id', async (req, res) => {
+  try {
+    const babyId = req.params.id;
+    await Babyregistration.findByIdAndDelete(babyId);
+    res.status(200).send('Baby record deleted successfully');
+  } catch (error) {
+    res.status(500).send('Error deleting baby record');
+  }
+});
+
 
    // stall routes
  router.get("/dollstall/", ensurelogin.ensureLoggedIn(), (req, res) => {
@@ -105,9 +112,7 @@ router.get("/sitterpayment", ensurelogin.ensureLoggedIn(), (req, res) => {
   res.render("sitterpayment");
 });
 
-router.get("/sitterpaymentlist/:sitterID?", 
-// ensurelogin.ensureLoggedIn(), 
-async (req, res) => {
+router.get("/sitterpaymentlist/:sitterID?", ensurelogin.ensureLoggedIn(), async (req, res) => {
   try {
     console.log(req.params)
     if(req.params.sitterID != null){

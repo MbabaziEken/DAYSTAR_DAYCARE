@@ -12,17 +12,17 @@ head
     form#submit.entry-form(onsubmit='return validationForm()' action='/sitters' method='POST' )
       .input
         label(for='sitters-name')  
-        input.sitters-text-form(type='text' placeholder='SITTER NAME' name='sitterName' id='name' value=sitter.sitterName)
+        input.form-control.sitters-text-form(type='text' placeholder='SITTER NAME' name='sitterName' id='name' value=sitter.sitterName)
         span#nameError.error
       br
       .form-group
         label(for='sitters-age')
-        input.sitters-text-form(type='number' placeholder='AGE' name='age' id='age' value=sitter.age)
+        input.form-control.sitters-text-form(type='number' placeholder='AGE' name='age' id='age' value=sitter.age)
         span#ageError.error
       br
       .form-group
         label(for='gender ')
-        select#gender(name='gender')
+        select.form-control#gender(name='gender')
           if sitter.gender == ''
             option(value='' selected) GENDER  
           else 
@@ -39,7 +39,7 @@ head
       br
       .form-group
         label(for='religion')
-        select#religion(name='religion')
+        select.form-control#religion(name='religion')
           if sitter.religion == ''
             option(value='' selected) RELIGION
           else 
@@ -68,50 +68,50 @@ head
       br
       .form-group
         label(for='education-background')  
-        input.sitters-text-form(type='text' placeholder='EDUCATION BACKGROUND' name='educationBackground' id='education' value=sitter.educationBackground)
+        input.form-control.sitters-text-form(type='text' placeholder='EDUCATION BACKGROUND' name='educationBackground' id='education' value=sitter.educationBackground)
         span#eduError.error
       br
       .form-group
         label(for='location')  
-        input.sitters-text-form(type='text' placeholder='LOCATION' name='location' id='location' value=sitter.location)
+        input.form-control.sitters-text-form(type='text' placeholder='LOCATION' name='location' id='location' value=sitter.location)
         span#locationError.error
       br
       .form-group
         label(for='contact')  
-        input.sitters-text-form(type='text' placeholder='CONTACT' name='contact' id='contact' value=sitter.contact)
+        input.form-control.sitters-text-form(type='text' placeholder='CONTACT' name='contact' id='contact' value=sitter.contact)
         span#contactError.error
       br
       .form-group
         label(for='ninno.')  
-        input.sitters-text-form(type='text' placeholder='NINno.' name='nin' id='nin' value=sitter.nin)
+        input.form-control.sitters-text-form(type='text' placeholder='NINno.' name='nin' id='nin' value=sitter.nin)
         span#ninError.error
       br
       .form-group
         label(for='next-of-kin')  
-        input.sitters-text-form(type='text' placeholder='NEXT OF KIN' name='nextOfKin' id='nextOfKin' value=sitter.nextOfKin)
+        input.form-control.sitters-text-form(type='text' placeholder='NEXT OF KIN' name='nextOfKin' id='nextOfKin' value=sitter.nextOfKin)
         span#nextofkinError.error
       br
       .form-group
         label(for="recommender'sitters-name")  
-        input.sitters-text-form(type='text' placeholder="RECOMMENDER'S NAME" 
+        input.form-control.sitters-text-form(type='text' placeholder="RECOMMENDER'S NAME" 
         name='recommendersName' id='recommender' value=sitter.recommendersName)
         span#recommendersnameError.error
       br
       .form-group
         label(for="recommender'sitters-name")  
-        input.sitters-text-form(type='text' placeholder="RECOMMENDER'S CONTACT" name='recommendersContact' id='recommendersContact' value=sitter.recommendersContact)
+        input.form-control.sitters-text-form(type='text' placeholder="RECOMMENDER'S CONTACT" name='recommendersContact' id='recommendersContact' value=sitter.recommendersContact)
         span#recommendersContactError.error
       br
       .form-group
         label(for="sitters-number")  
-        input.sitters-text-form(type='text' placeholder="SITTER NUMBER" name='sitterNumber' id='sitterNumber' value=sitter.sitterNumber)
+        input.form-control.sitters-text-form(type='text' placeholder="SITTER NUMBER" name='sitterNumber' id='sitterNumber' value=sitter.sitterNumber)
         span#sitternumberError.error
       br
       .form-group
         label(for="sitters-availability")  
-        input.sitters-text-form(type='text' placeholder="AVAILABILITY" name='availability' id='availability' value=sitter.availability)
+        input.form-control.sitters-text-form(type='text' placeholder="AVAILABILITY" name='availability' id='availability' value=sitter.availability)
         span#availabilityError.error
       br
       button.btn-primary(type='submit') Update
-script(src='/js/sittersvalidation.js')
+script(src='/js/validation.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

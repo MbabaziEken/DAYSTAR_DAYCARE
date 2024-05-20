@@ -13,24 +13,24 @@ head
     form#submit.entry-form(action='/babbiescheckin' method='POST')
       .input
         label(for='babbies-name')  
-        input.babbies-text-form(type='text' placeholder='BABYNAME' name='babyName' id='Babyname' value='babyName')
+        input.form-control.babbies-text-form(type='text' placeholder='BABYNAME' name='babyName' id='Babyname' value=babyNumber.babyName)
       br
       .form-group
         label(for="parent's-name")  
-        input.babbies-text-form(type='text' placeholder="PARENT'S NAME" name='parentsName' id='ParentsName' value='parentsName')
+        input.form-control.babbies-text-form(type='text' placeholder="PARENT'S NAME" name='parentsName' id='ParentsName' value=babyNumber.parentsName)
       br
       .form-group
         label(for='babby-number')  
-        input.babbies-text-form(type='text' placeholder='BABBY NUMBER' name='idNo' id='IdNo' value='idNo')
+        input.form-control.babbies-text-form(type='text' placeholder='BABBY NUMBER' name='idNo' id='IdNo' value=babyNumber.idNo)
       br
       .form-group
         label(for='time')  
-        input.babbies-text-form(type='text' placeholder='TIME ' name='time' id='time' value='time')
+        input.form-control.babbies-text-form(type='text' placeholder='TIME ' name='time' id='time' value=babyNumber.time)
       br
       .form-group
         label(for='broughtby')  
-        input.babbies-text-form(type='text' placeholder='BROUGHTBY' name='broughtBy' id='broughtby' value='broughtBy')
+        input.form-control.babbies-text-form(type='text' placeholder='BROUGHTBY' name='broughtBy' id='broughtby' value=babyNumber.broughtBy)
       br
       button.btn-primary(type='submit') checkin
-script(src='/js/babbies.js')
+script(src='/js/validation.js')
 script(src='/assets/boostrap/js/boostrap.bundle.js')

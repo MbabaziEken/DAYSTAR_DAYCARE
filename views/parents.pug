@@ -12,22 +12,22 @@ head
     form.entry-form(onsubmit='return validationForm()' action='/parents' method='POST')
       .input
         label(for='parents')  
-        input.parents-text-form(type='text' placeholder='Enter your name' name='ParentsName' id='ParentsName')
+        input.form-control.parents-text-form(type='text' placeholder='Enter your name' name='ParentsName' id='ParentsName')
         span#ParentsNameError.error
       br
       .form-group
         label(for='BabyName')  
-        input.BabyName-text-form(type='text' placeholder="Enter your babbiesname" name='BabyName' id='BabyName')
+        input.form-control.BabyName-text-form(type='text' placeholder="Enter your babbiesname" name='BabyName' id='BabyName')
         span#BabyNameError.error
       br
       .form-group
         label(for='parents-age')
-        input.parents-text-form(type='number' placeholder='Enter your age' name='Age' id='Age')
+        input.form-control.parents-text-form(type='number' placeholder='Enter your age' name='Age' id='Age')
         span#AgeError.error
       br
       .form-group
         label(for='gender ')  
-        select#Gender(name='Gender')
+        select.form-control#Gender(name='Gender')
           option(value='') GENDER
           option(value='male') male
           option(value='female') female
@@ -36,29 +36,29 @@ head
       br
       .form-group
       label(for='NIN.no.')  
-      input.parents-text-form(type='text' placeholder='Enter your NIN' name='nin' id='nin')
+      input.form-control.parents-text-form(type='text' placeholder='Enter your NIN' name='nin' id='nin')
       span#ninError.error
       br
       .form-group
         label(for='location')  
-        input.parents-text-form(type='text' placeholder='Location' name='Location' id='Location')
+        input.form-control.parents-text-form(type='text' placeholder='Location' name='Location' id='Location')
         span#LocationError.error
       br
       .form-group
         label(for='contact')  
-        input.parents-text-form(type='text' placeholder='CONTACT' name='Contact' id='Contact')
+        input.form-control.parents-text-form(type='text' placeholder='CONTACT' name='Contact' id='Contact')
         span#ContactError.error
       br
       .form-group
         label(for='next-of-kin')  
-        input.parents-text-form(type='text' placeholder='writeyournextofkin' name='NextOfKin' id='NextOfKin')
+        input.form-control.parents-text-form(type='text' placeholder='writeyournextofkin' name='NextOfKin' id='NextOfKin')
         span#NextOfKinError.error
       br
       .form-group
         label(for="next-of-kin's-contact")  
-        input.parents-text-form(type='text' placeholder="theirphonenumber" name='NextOfKinsContact' id='NextOfKinsContact')
+        input.form-control.parents-text-form(type='text' placeholder="theirphonenumber" name='NextOfKinsContact' id='NextOfKinsContact')
         span#NextOfKinsContactError.error
       br
       button.btn-primary(type='submit') register
-script(src='/js/parentsvalidation.js')
+script(src='/js/validation.js')
 script(src='/assets/boostrap/js/boostrap.bundle.js')

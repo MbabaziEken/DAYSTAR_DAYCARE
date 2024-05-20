@@ -31,28 +31,33 @@ table.table.table-striped.table-responsive
                             th BROUGHTBY
                             th PICKEDBY
                             th EDIT
+                            th DELETE
                     tbody
-                        if users.length
-                        each user in users
+                        if babies.length
+                        each baby in babies
                             tr
-                                td #{user.babyName}
-                                td #{user.gender}
-                                td #{user.age}
-                                td #{user.favorites}
-                                td #{user.healthStatus}
-                                td #{user.parentsContact}
-                                td #{user.parentsName}
-                                td #{user.nextOfKin}
-                                td #{user.idNo}
-                                td #{user.allergies}
-                                td #{user.assignedSitter}
-                                td #{user.checkIn}
-                                td #{user.checkOut}
-                                td #{user.timeSpent}
-                                td #{user.broughtBy}
-                                td #{user.pickedBy}
+                                td #{baby.babyName}
+                                td #{baby.gender}
+                                td #{baby.age}
+                                td #{baby.favorites}
+                                td #{baby.healthStatus}
+                                td #{baby.parentsContact}
+                                td #{baby.parentsName}
+                                td #{baby.nextOfKin}
+                                td #{baby.idNo}
+                                td #{baby.allergies}
+                                td #{baby.assignedSitter}
+                                td #{baby.checkIn}
+                                td #{baby.checkOut}
+                                td #{baby.timeSpent}
+                                td #{baby.broughtBy}
+                                td #{baby.pickedBy}
                                 td
 
                                         button.btn.btn-primary.edit-btn(type="submit") Edit
+                                td
+                                  form(method="POST" action="/deletebaby")
+                                      input(type="hidden" name="id" value= baby._id)
+                                      button.btn.btn-block.btn-danger(type="submit") Delete
 script(src='/js/babbiesclockin.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

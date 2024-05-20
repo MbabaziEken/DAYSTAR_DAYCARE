@@ -1,11 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const ensurelogin = require("connect-ensure-login")
 
 // import model
 const Parentregistration = require("../models/Parents");
 
 //parent routes
-router.get("/parents", (req, res) => {
+router.get("/parents", ensurelogin.ensureLoggedIn(), (req, res) => {
   res.render("parents");
 });
 

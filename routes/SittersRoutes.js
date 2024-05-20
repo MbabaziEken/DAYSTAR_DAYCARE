@@ -4,9 +4,10 @@ const router = express.Router();
 // import model
 const Sitterregistration = require("../models/Sitter");
 const sitterpayment = require("../models/sitterpayment");
+const ensurelogin = require("connect-ensure-login")
 
 //sitters routes
-router.get("/sitterRegistration", (req, res) => {
+router.get("/sitterRegistration",ensurelogin.ensureLoggedIn(),(req, res) => {
   res.render("sitters");
 });
 
@@ -73,6 +74,17 @@ router.post("/sitters", async (req, res) => {
     res.status(400).send("sorry, something went wrong!", error);
     console.log("Error registering sitter", error);
   }
+});
+
+//delete route for each  sitter form in database
+router.post("/deleteSitter", async (req, res) => {
+    try {
+        await Sitterregistration.deleteOne({ _id: req.body.id });
+        res.redirect("back");
+    } catch (error) {
+        res.status(400).send("unable to delete sitter from db!");
+        console.log("error deleting sitter...", error);
+    }
 });
 
 module.exports = router;

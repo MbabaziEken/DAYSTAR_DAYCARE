@@ -32,8 +32,8 @@ const babyroutes = require("./routes/BabbiesRoutes");
 const sittersroutes = require("./routes/SittersRoutes");
 const parentsroutes = require("./routes/ParentRoutes");
 const sitterpayment = require("./routes/sitterpaymentRoutes");
-const babbiescheckin = require("./routes/BabbiescheckinRoutes");
-// const babbiescheckinlist = require("./routes/Babbiescheckinlist")
+const babbiescheckin = require("./routes/babbiescheckinRoutes");
+
 // rendering engine
 const app = express();
 
@@ -73,8 +73,7 @@ app.use("/", sittersroutes);
 app.use("/", authRoutes);
 app.use("/", parentsroutes);
 app.use("/", dashbroutes);
-// app.use("/", babbiescheckin)
-// app.use("/", babbiescheckinlist)
+app.use("/", babbiescheckin)
 
 app.listen(4100, () => {
   console.log("server is running on port 4100");

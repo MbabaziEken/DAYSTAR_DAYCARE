@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Sitters
-  link(rel='stylesheet'href='/assets/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.css')
   link(rel='stylesheet' href='/css/sitters.css')
 #main
   #container
@@ -12,17 +12,17 @@ head
     form#submit.entry-form(onsubmit='return validationForm()' action='/sitters' method='POST' )
       .input
         label(for='sitters-name')  
-        input.sitters-text-form(type='text' placeholder='SITTER NAME' name='sitterName' id='name')
+        input.form-control.sitters-text-form(type='text' placeholder='SITTER NAME' name='sitterName' id='name')
         span#nameError.error
       br
       .form-group
         label(for='sitters-age')
-        input.sitters-text-form(type='number' placeholder='AGE' name='age' id='age')
+        input.form-control.sitters-text-form(type='number' placeholder='AGE' name='age' id='age')
         span#ageError.error
       br
       .form-group
         label(for='gender ')
-        select#gender(name='gender')
+        select.form-control#gender(name='gender')
           option(value='') GENDER
           option(value='male') male
           option(value='female') female
@@ -30,7 +30,7 @@ head
       br
       .form-group
         label(for='religion')
-        select#religion(name='religion')
+        select.form-control#religion(name='religion')
           option(value='') RELIGION
           option(value='Christian') Christian
           option(value='Moslem') Moslem
@@ -41,50 +41,50 @@ head
       br
       .form-group
         label(for='education-background')  
-        input.sitters-text-form(type='text' placeholder='EDUCATION BACKGROUND' name='educationBackground' id='education')
+        input.form-control.sitters-text-form(type='text' placeholder='EDUCATION BACKGROUND' name='educationBackground' id='education')
         span#eduError.error
       br
       .form-group
         label(for='location')  
-        input.sitters-text-form(type='text' placeholder='LOCATION' name='location' id='location')
+        input.form-control.sitters-text-form(type='text' placeholder='LOCATION' name='location' id='location')
         span#locationError.error
       br
       .form-group
         label(for='contact')  
-        input.sitters-text-form(type='text' placeholder='CONTACT' name='contact' id='contact')
+        input.form-control.sitters-text-form(type='text' placeholder='CONTACT' name='contact' id='contact')
         span#contactError.error
       br
       .form-group
         label(for='ninno.')  
-        input.sitters-text-form(type='text' placeholder='NINno.' name='nin' id='nin')
+        input.form-control.sitters-text-form(type='text' placeholder='NINno.' name='nin' id='nin')
         span#ninError.error
       br
       .form-group
         label(for='next-of-kin')  
-        input.sitters-text-form(type='text' placeholder='NEXT OF KIN' name='nextOfKin' id='nextOfKin')
+        input.form-control.sitters-text-form(type='text' placeholder='NEXT OF KIN' name='nextOfKin' id='nextOfKin')
         span#nextofkinError.error
       br
       .form-group
         label(for="recommender'sitters-name")  
-        input.sitters-text-form(type='text' placeholder="RECOMMENDER'S NAME" 
+        input.form-control.sitters-text-form(type='text' placeholder="RECOMMENDER'S NAME" 
         name='recommendersName' id='recommender')
         span#recommendersnameError.error
       br
       .form-group
         label(for="recommender'sitters-name")  
-        input.sitters-text-form(type='text' placeholder="RECOMMENDER'S CONTACT" name='recommendersContact' id='recommenderscontact')
+        input.form-control.sitters-text-form(type='text' placeholder="RECOMMENDER'S CONTACT" name='recommendersContact' id='recommenderscontact')
         span#recommenderscontactError.error
       br
       .form-group
         label(for="sitters-number")  
-        input.sitters-text-form(type='text' placeholder="SITTER NUMBER" name='sitterNumber' id='sitternumber')
+        input.form-control.sitters-text-form(type='text' placeholder="SITTER NUMBER" name='sitterNumber' id='sitternumber')
         span#sitternumberError.error
       br
       .form-group
         label(for="sitters-availability")  
-        input.sitters-text-form(type='text' placeholder="AVAILABILITY" name='availability' id='availability')
+        input.form-control.sitters-text-form(type='text' placeholder="AVAILABILITY" name='availability' id='availability')
         span#availabilityError.error
       br
       button.btn-primary(type='submit') register
-script(src='/js/sittersvalidation.js')
+script(src='/js/validation.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

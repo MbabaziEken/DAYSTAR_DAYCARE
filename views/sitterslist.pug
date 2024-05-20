@@ -25,6 +25,7 @@ table.table.table-striped.table-responsive
                             th SITTER NUMBER
                             th AVAILABILITY 
                             th UPDATE
+                            th DELETE
                     tbody
                         if users.length
                         each user in users
@@ -43,5 +44,9 @@ table.table.table-striped.table-responsive
                                 td #{user.availability}
                                 td 
                                     button.btn.btn-primary.update-btn Update
+                                td 
+                                  form(method="POST" action="/deleteSitter")
+                                    input(type="hidden" name="id" value= user._id)
+                                    button.btn.btn-block.btn-danger(type="submit") Delete
 script(src='/js/sitterupdate.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

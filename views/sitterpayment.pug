@@ -12,22 +12,22 @@ head
       .row
         .input-field.col
           label.form-label(for='fullName') FullName
-          input#FullName(type='text' name='fullName' value=sitter.fullName)
+          input.form-control#FullName(type='text' name='fullName' value=sitter.fullName)
           span#FullNameError.error
         br
         .row
           .input-field.col
             label.form-label(for='amount') Amount
-            input#amount(type='number' name='amount' value=sitter.amount)
+            input.form-control#amount(type='number' name='amount' value=sitter.amount)
             span#amountError.error
         br
         .row
           .input-field.col
             label.form-label(for='paymentstatus') Paymentstaus
-            input#amount(type='text' name='paymentStatus' value=sitter.paymentStatus)
+            input.form-control#amount(type='text' name='paymentStatus' value=sitter.paymentStatus)
             span#paymentstatusError.error
           br
           div
             button.btn.btn-primary(type='submit') Submit
-script(src='/js/sitterpaymentvalidation.js')
+script(src='/js/validation.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')

@@ -69,7 +69,11 @@ router.post("/sitters", async (req, res) => {
         availability,
       }
     );
-    res.redirect("/sitters");
+    const sitter = new Sitterregistration(req.body);
+    console.log(sittter);
+    await sitter.save();
+    res.redirect("/Admin");
+
   } catch (error) {
     res.status(400).send("sorry, something went wrong!", error);
     console.log("Error registering sitter", error);

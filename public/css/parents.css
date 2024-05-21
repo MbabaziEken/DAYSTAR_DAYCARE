@@ -7,11 +7,8 @@ body{
 }
 
 .custom-bg-color{
-    background-color:#FFF380 ;
-    
-        
+    background-color:#FFF380 ;   
 }
-
 
 #main{
     background-color: #cccc;
@@ -21,7 +18,6 @@ body{
     padding-top: 20px;
     width: 20%;
 }
-
 
 h5{
     margin: 0;
@@ -68,8 +64,7 @@ select[id=gender]{
     height: 30px;
     border-radius: 10px;
 }
-
-button[class="btn-primary"]{
+button[class=" btn-btn-primary"]{
     background-color:#FFF380;
     color: rgb(29, 29, 1);
     width: 70px;

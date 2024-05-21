@@ -28,8 +28,8 @@ router.post("/babbiesRegister", async (req, res) => {
 router.get("/babbies", async (req, res) => {
   try {
     let babies = await Babyregistration.find().sort({ $natural: -1 }); //from line8
-    res.render("babbieslist", { babies: babies }); // to display babies from data base
-    console.log("display babbies", babies);
+    res.render("babbieslist", { babbies: babbies }); // to display babies from data base
+    console.log("display babbies", babbies);
   } catch (error) {
     res.status(400).send("unable to find babies from database!");
     console.log("unable to find babies from database!...", error);

@@ -21,7 +21,7 @@ forms.forEach((form) => {
       } else {
         field.classList.add('is-valid');
         field.classList.remove('is-invalid');
-        field.parentNode.lastChild.innerHTML = '';
+        field.parentNode.lastChild.innerHTML = 'This field is required';
       }
     });
   });

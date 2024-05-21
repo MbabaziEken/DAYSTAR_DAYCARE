@@ -30,7 +30,7 @@ table.table.table-striped.table-responsive
                             th TIME SPENT
                             th BROUGHTBY
                             th PICKEDBY
-                            th EDIT
+                            th UPDATE
                             th DELETE
                     tbody
                         if babies.length
@@ -52,12 +52,10 @@ table.table.table-striped.table-responsive
                                 td #{baby.timeSpent}
                                 td #{baby.broughtBy}
                                 td #{baby.pickedBy}
-                                td
-
-                                        button.btn.btn-primary.edit-btn(type="submit") Edit
+                                td 
+                                  a.btn.btn-primary( href=`/babyregister/`+ baby._id) Update 
                                 td
                                   form(method="POST" action="/deletebaby")
                                       input(type="hidden" name="id" value= baby._id)
                                       button.btn.btn-block.btn-danger(type="submit") Delete
-script(src='/js/babbiesclockin.js')
 script(src='/assets/bootstrap/js/bootstrap.bundle.js')
